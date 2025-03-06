@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
-
-
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poller+One&display=swap');
 
 :root {
     scroll-behavior: smooth;
@@ -8,7 +8,7 @@
     /* VARIABLES */
     --ff-mono: 'DM Mono', monospace;
     --ff-title: "Poller One", serif;
-    --ff-text: 'Rubik', sans-serif;
+    --ff-text: "Lora", serif;
     --clr-title: #005cef;
     /*  #E53935; */
     --clr-title2: #ff1f25;
@@ -143,7 +143,7 @@ h6 {
     position: fixed;
     inset: 0;
 
-    color: var(--clr-details2);
+    color: var(--clr-title2);
     z-index: 99999999;
     font-size: 3rem;
     display: flex;
@@ -318,12 +318,12 @@ h6 {
     gap: 1rem;
     /*  padding-inline: 1rem; */
     width: 90vw;
-   height: 80vh;
+    height: 90vh; 
 }
 .title-hero {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--clr-text);
+    color: var(--clr-title);
     text-align: start;
     margin-bottom: 1rem;
     font-family: var(--ff-title);
@@ -343,7 +343,8 @@ h6 {
 
 .hero-p {
     color: var(--clr-title);
-    font-family: var(--ff-title);
+    font-family: var(--ff-text);
+    font-size: 1rem;
 }
 /* 
 .portada {
@@ -370,7 +371,7 @@ h6 {
 } */
 
 .portada {
-    margin-top: 3rem;
+    margin-top: 1rem;
     padding-top: 1rem;
     width:100%;
     /* padding: 1rem; */
