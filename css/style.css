@@ -110,7 +110,7 @@ header::after {
     transform: translateX(-50%);
     width: 85vw;
     /* Ajusta el ancho según sea necesario */
-    height: 2px;
+    height: 3px;
     /* Ajusta el grosor del borde */
     background-color: var(--clr-details);
     /* Color del borde */
@@ -304,8 +304,10 @@ h6 {
 }
 
 .btn-eng>a:hover {
-    color: rosybrown;
+    color: var(--clr-title)
 }
+
+/* HERO */
 
 .hero {
     margin-top: 3rem;
@@ -316,8 +318,8 @@ h6 {
     gap: 1rem;
     /*  padding-inline: 1rem; */
     width: 90vw;
+   height: 80vh;
 }
-
 .title-hero {
     font-size: 1.8rem;
     font-weight: 700;
@@ -325,6 +327,8 @@ h6 {
     text-align: start;
     margin-bottom: 1rem;
     font-family: var(--ff-title);
+    text-wrap: nowrap;
+    display: flex;
 }
 
 .subtitle-hero {
@@ -341,70 +345,117 @@ h6 {
     color: var(--clr-title);
     font-family: var(--ff-title);
 }
-
+/* 
 .portada {
-    background-color: var(--clr-title2);
-    width: 30%;
+      background-color: var(--clr-title2); 
+    width: 400px;
     margin-top: 1rem;
     padding: 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     height: auto;
-
+    align-items: center;
+  
 }
+
 
 .portada img {
 
-    width: 110px;
-    object-position: left;
-    border-radius: 400px;
+    width: 300px;
+    border-radius: 150px;
     background: var(--clr-details2);
+    
+   
+} */
+
+.portada {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    width:100%;
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease 
 }
 
+.portada img {
+    width: 300px;
+    border-radius: 50%;
+    background: var(--clr-title);
+    padding-top:10px;
+    padding: .2px;
+    padding-bottom: .3px;
+    display: block; /* Evita márgenes extra */
+    position: relative;
+    justify-content: center;
+}
 /* PORTOFOLIO */
+
 .portfolio {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    /*  gap: 0; */
     margin-top: 3rem;
     /*  padding-inline: 1rem; */
     width: 100%;
     background-color: var(--clr-title);
 }
 
+
 .title-portfolio {
+    display: flex;
     margin-top: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 700;
     color: var(--clr-text);
     text-align: start;
     margin-left: .5rem;
     margin-bottom: 1rem;
     color: #e0e0e0;
+    margin-inline-start: 1.4rem;
 }
 
 .portfolio-p {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    padding-inline: 1rem;
+    width: 90vw;
+    /*   padding-inline: 1rem; */
     justify-content: center;
     text-align: start;
     color: #e0e0e0;
+    margin-top: .5rem;
+}
+
+
+/* Media query para dispositivos más pequeños que 360px */
+@media (max-width: 360px) {
+    .title-hero {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .nav {
+        width: 70vw;
+    }
 }
 
 /* NAV DESKTOP */
 @media(min-width:1200px) {
     header {
-        padding: 1rem 1.2rem;
+        padding: 1.5rem 1.7rem;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         background-color: rgba(255, 255, 255, 0.3);
         /*  border-bottom: 1px solid var(--clr-details); */
+
     }
 
     header::after {
-        width: 97vw;
+        width: 94vw;
     }
 
     .nav {
@@ -490,7 +541,8 @@ h6 {
     .hero {
         flex-direction: row;
         justify-content: space-between;
-
+        margin-top: 5rem;
+    height: 100vh;
     }
 
     .title-hero {
@@ -499,5 +551,9 @@ h6 {
 
     .title-portfolio {
         font-size: 3rem;
+    }
+
+    .portada {
+        margin-top: 0;
     }
 }
