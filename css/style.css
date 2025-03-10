@@ -197,8 +197,8 @@ h6 {
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: var(--clr-title2);
-    /* rgba(0, 0, 0, .5) */
+    background-color:/*  var(--clr-title2); */
+    rgba(0, 0, 0, .85);
     padding: 2rem;
     padding-right: 1rem;
     transform: translateX(-100%);
@@ -238,7 +238,7 @@ h6 {
 }
 
 .nav-list li a {
-    color: var(--clr-details);
+    color: var(--clr-text2);
     transition: color .3s;
     font-size: 1.9rem;
     font-family: var(--clr-title);
@@ -283,7 +283,7 @@ h6 {
 }
 
 .cerrar-menu {
-    color: var(--clr-details);
+    color: var(--clr-text2);
     align-self: start;
     margin-bottom: 2rem;
 }
@@ -329,6 +329,7 @@ h6 {
     height: 90vh;
 }
 
+
 .title-hero {
     font-size: 1.8rem;
     font-weight: 700;
@@ -356,22 +357,6 @@ h6 {
     font-size: 1rem;
 }
 
-/* .cajita-wrapp
-{
-    display: flex;
-    gap: 1rem;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-left: 1rem;
-}
-.cajita1,.cajita2,.cajita3,.cajita4,.cajita5{
-    width: 50px;
-    background-color: var(--clr-details2);
-    height: 50px;
-   
-    
-} */
 
 .portada {
     margin-top: 1rem;
@@ -396,16 +381,7 @@ h6 {
     justify-content: center;
 }
 
-.hola {
-    margin-top: 2rem;
-    font-size: 1.5rem;
- /*    color: var(--clr-text); */
-}
 
-.bienvenidos {
-     opacity: 0; 
-     color: green;
-}
 
 /* PORTOFOLIO */
 
@@ -488,7 +464,7 @@ h6 {
 
     .nav {
         width: 50vw;
-        background-color: var(--clr-title2);
+        /* background-color: var(--clr-title2); */
     }
 
     .nav-list li a {
@@ -582,26 +558,12 @@ h6 {
         height: 100vh;
     }
 
-    .hola {
-        grid-column: span 2;
-        justify-self: start;
-        font-size: 3rem;
-    }
-
     .title-hero {
         font-size: 3rem;
 
     }
-
     .title-portfolio {
         font-size: 3rem;
         margin-inline-start: 3rem;
     }
-
-    .cajita {
-        width: 200px;
-        background-color: var(--clr-details2);
-        height: 320px;
-    }
-
 }

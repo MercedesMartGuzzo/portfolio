@@ -33,10 +33,11 @@ document.querySelector(".portada img").addEventListener("mouseleave", function (
         });
 
 });
+gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(".title-portfolio",
     {
-        y: 50,
+        y: 40,
         opacity: 0
     },
     {
@@ -52,55 +53,5 @@ gsap.fromTo(".title-portfolio",
     }
 );
 
-/* BIENVENIDOS HERO */
-
-gsap.to(".bienvenidos", {
-    keyframes: [
-        { color: "#ffdd18", duration: 1 }, // Verde
-        { color: "#ff0000", duration: 1 }, // Rojo  
-        { color: "#005cef", duration: 1 }  // Azul
-    ],
-    scrollTrigger: {
-        trigger: ".hola",
-        start: "top 80%",
-        end: "top 30%",
-        scrub: true,
-    }
-});
-
-gsap.registerPlugin(ScrollTrigger);
-
-let mm = gsap.matchMedia();
-
-mm.add("(max-width: 768px)", () =>
-
-    gsap.to(".bienvenidos", {
-        opacity: 1,
-        x: 60,
-        color: "#005cef",
-        duration: 2,
-        scrollTrigger: {
-            trigger: ".hola",
-            start: "top 80%",
-            end: "top 30%",
-            scrub: true,
-        }
-    })
-)
-
-
-mm.add("(min-width: 1200px)", () => {
-    gsap.to(".bienvenidos", {
-        x: 400,
-        opacity: 1,
-        duration: 2,
-        scrollTrigger: {
-            trigger: ".hola",
-            start: "top 80%",
-            end: "top 30%",
-            scrub: true,
-        }
-    });
-});
 
 
