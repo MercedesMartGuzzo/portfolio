@@ -318,7 +318,7 @@ h6 {
 /* HERO */
 
 .hero {
-    margin-top: 3rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -326,7 +326,8 @@ h6 {
     gap: 1rem;
     /*  padding-inline: 1rem; */
     width: 90vw;
-    height: 90vh;
+  height:auto;
+  min-height: 100vh;
 }
 
 
@@ -356,7 +357,22 @@ h6 {
     font-family: var(--ff-text);
     font-size: 1rem;
 }
-
+.hello-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff-title);
+    color: var(--clr-details);
+     margin-top: 3rem; 
+     padding-top: 1rem;
+    font-size: 2.8rem;
+    text-align: center;
+    width: 90vw;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
 
 .portada {
     margin-top: 1rem;
@@ -366,7 +382,10 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.5s ease
+    transition: background-color 0.5s ease;
+    position: relative;
+        min-height: 300px;
+    overflow: visible;
 }
 
 .portada img {
@@ -550,12 +569,13 @@ h6 {
     /* hero */
 
     .hero {
-        /*  flex-direction: row;
-        justify-content: space-between; */
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+       /*   flex-direction: row;
+        justify-content: space-between;  */
+         display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
         margin-top: 5rem;
-        height: 100vh;
+        width: 100vw;
+       min-height: 100vh;
     }
 
     .title-hero {
@@ -565,5 +585,10 @@ h6 {
     .title-portfolio {
         font-size: 3rem;
         margin-inline-start: 3rem;
+    }
+    .hello-hero{
+        grid-column: span 2;
+        font-size: 3.5rem;
+        margin-top: 1rem;
     }
 }
