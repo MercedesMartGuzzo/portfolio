@@ -55,17 +55,18 @@ gsap.fromTo(".title-portfolio",
 
 gsap.registerPlugin(ScrollTrigger);
 
-const text = new SplitType('.hello-hero', { types: "words, chars" });
+const text = new SplitType('.subtitle-hero', { types: "words, chars" });
 
 text.chars.forEach((char, index) => {
     let charsTl = gsap.timeline({
-        scrollTrigger: {
+        delay: 0.5,
+        /* scrollTrigger: {
             trigger: ".hello-hero",
             start: "top 80%",  // Cuando el elemento está en el 80% de la pantalla
             end: "bottom 50%", // Finaliza cuando está al 50%
-            scrub: false, // No hace efecto scrub (sin seguimiento del scroll)
+            scrub: false,  */// No hace efecto scrub (sin seguimiento del scroll)
             toggleActions: "play none none none" // Solo se ejecuta una vez
-        }
+       /*  } */
     });
 
     charsTl.from(char, {

@@ -572,7 +572,7 @@ h6 {
        /*   flex-direction: row;
         justify-content: space-between;  */
          display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-columns: 1fr 1fr; 
         margin-top: 5rem;
         width: 100vw;
        min-height: 100vh;
@@ -581,6 +581,9 @@ h6 {
     .title-hero {
         font-size: 3rem;
 
+    }
+    .subtitle-hero{
+        font-size: 2rem;
     }
     .title-portfolio {
         font-size: 3rem;
