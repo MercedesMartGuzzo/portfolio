@@ -197,8 +197,9 @@ h6 {
     top: 0;
     left: 0;
     bottom: 0;
-    background-color:/*  var(--clr-title2); */
-    rgba(0, 0, 0, .85);
+    background-color:
+        /*  var(--clr-title2); */
+        rgba(0, 0, 0, .85);
     padding: 2rem;
     padding-right: 1rem;
     transform: translateX(-100%);
@@ -309,6 +310,7 @@ h6 {
     justify-content: end;
     align-items: end;
     cursor: pointer;
+    
 }
 
 .btn-eng>a:hover {
@@ -326,8 +328,8 @@ h6 {
     gap: 1rem;
     /*  padding-inline: 1rem; */
     width: 90vw;
-  height:auto;
-  min-height: 100vh;
+    height: auto;
+    min-height: 100vh;
 }
 
 
@@ -340,6 +342,9 @@ h6 {
     font-family: var(--ff-title);
     text-wrap: nowrap;
     display: flex;
+    opacity: 0; 
+    transform: translateY(-100px);
+    cursor:pointer;
 }
 
 .subtitle-hero {
@@ -357,22 +362,8 @@ h6 {
     font-family: var(--ff-text);
     font-size: 1rem;
 }
-.hello-hero{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--ff-title);
-    color: var(--clr-details);
-     margin-top: 3rem; 
-     padding-top: 1rem;
-    font-size: 2.8rem;
-    text-align: center;
-    width: 90vw;
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-}
+
+
 
 .portada {
     margin-top: 1rem;
@@ -384,7 +375,7 @@ h6 {
     align-items: center;
     transition: background-color 0.5s ease;
     position: relative;
-        min-height: 300px;
+    min-height: 300px;
     overflow: visible;
 }
 
@@ -399,8 +390,16 @@ h6 {
     position: relative;
     justify-content: center;
 }
-
-
+.hello{
+    display:flex;
+    flex-direction: colum;
+    font-family: var(--ff-title);
+    font-size:2rem ;
+    color:var(--clr-details);
+    margin-top: 3rem;
+    text-align: center;
+    justify-content: center;
+}
 
 /* PORTOFOLIO */
 
@@ -569,27 +568,30 @@ h6 {
     /* hero */
 
     .hero {
-       /*   flex-direction: row;
+        /*   flex-direction: row;
         justify-content: space-between;  */
-         display: grid;
-        grid-template-columns: 1fr 1fr; 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         margin-top: 5rem;
         width: 100vw;
-       min-height: 100vh;
+         min-height: 100vh; 
     }
 
     .title-hero {
         font-size: 3rem;
 
     }
-    .subtitle-hero{
+
+    .subtitle-hero {
         font-size: 2rem;
     }
+
     .title-portfolio {
         font-size: 3rem;
         margin-inline-start: 3rem;
     }
-    .hello-hero{
+
+    .hello {
         grid-column: span 2;
         font-size: 3.5rem;
         margin-top: 1rem;

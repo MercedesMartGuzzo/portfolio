@@ -65,8 +65,8 @@ text.chars.forEach((char, index) => {
             start: "top 80%",  // Cuando el elemento está en el 80% de la pantalla
             end: "bottom 50%", // Finaliza cuando está al 50%
             scrub: false,  */// No hace efecto scrub (sin seguimiento del scroll)
-            toggleActions: "play none none none" // Solo se ejecuta una vez
-       /*  } */
+        toggleActions: "play none none none" // Solo se ejecuta una vez
+        /*  } */
     });
 
     charsTl.from(char, {
@@ -90,28 +90,91 @@ text.chars.forEach((char, index) => {
 
     function charsHover() {
         gsap.timeline()
-        .to(char, {
-            y: gsap.utils.random(-50, 50),
-            x: gsap.utils.random(-50, 50),
-            rotate: gsap.utils.random(-90, 90),
-            scale: gsap.utils.random(0.5, 1.5),
-            duration: .5,
-            ease: "back.out",
-            color: `rgb(${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)})`,
-            onStart: () => char.removeEventListener("mouseenter", charsHover),
-        })
-        .to(char, {
-            y: 0,
-            x: 0,
-            rotate: 0,
-            scale: 1,
-            color: charOriginalColor,
-            delay: 1,
-            duration: .5,
-            ease: "back.out",
-            onComplete: () => setTimeout(() => char.addEventListener("mouseenter", charsHover), 100),
-        });
+            .to(char, {
+                y: gsap.utils.random(-50, 50),
+                x: gsap.utils.random(-50, 50),
+                rotate: gsap.utils.random(-90, 90),
+                scale: gsap.utils.random(0.5, 1.5),
+                duration: .5,
+                ease: "back.out",
+                color: `rgb(${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)})`,
+                onStart: () => char.removeEventListener("mouseenter", charsHover),
+            })
+            .to(char, {
+                y: 0,
+                x: 0,
+                rotate: 0,
+                scale: 1,
+                color: charOriginalColor,
+                delay: 1,
+                duration: .5,
+                ease: "back.out",
+                onComplete: () => setTimeout(() => char.addEventListener("mouseenter", charsHover), 100),
+            });
     }
 
     char.addEventListener("mouseenter", charsHover);
 });
+
+
+
+
+
+gsap.to(".title-hero", {
+    y: 0, // Llega a su posición normal
+    opacity: 1, // Se vuelve visible
+    duration: 1, // Duración de la animación
+    ease: "bounce"
+});
+const title = document.querySelector(".title-hero");
+
+title.addEventListener("mouseover", () => {
+    gsap.to(title, {
+        color: "#005cef", // Cambia el color del texto
+        duration: 0.3,
+        ease: "power1.out"
+    });
+});
+
+title.addEventListener("mouseleave", () => {
+    gsap.to(title, {
+        color: "black",
+        duration: 0.5,
+        ease: "power2.out"
+    });
+});
+
+
+/* btn-eng */
+gsap.from(".btn-eng, .btn-eng i", {
+    y: -50, 
+    opacity: 0, 
+    stagger: 0.2, 
+    duration: 1, 
+    ease: "bounce.out" 
+});
+
+/* HELLO */
+
+
+const text1 = new SplitType(".hello h3", { types: "words, chars" });
+
+gsap.fromTo(
+    text1.chars,
+    {
+        opacity: 0,
+        y: 50,
+        color: "black"
+    },
+    {
+        opacity: 1, y: 0, color: "#ff5733",
+        stagger: 0.05, duration: 1, ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".hello",
+            start: "top 80%", 
+            end: "top 30%",    
+            toggleActions: "play none reverse none",
+            scrub: true
+        }
+    }
+);
