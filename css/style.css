@@ -392,13 +392,14 @@ h6 {
 }
 .hello{
     display:flex;
-    flex-direction: colum;
+    flex-direction: column;
     font-family: var(--ff-title);
     font-size:2rem ;
     color:var(--clr-details);
     margin-top: 3rem;
     text-align: center;
     justify-content: center;
+    overflow-y: visible;
 }
 
 /* PORTOFOLIO */
