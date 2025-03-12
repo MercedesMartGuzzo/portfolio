@@ -1,3 +1,15 @@
+
+/* btn-eng */
+gsap.from(".btn-eng, .btn-eng i", {
+    y: -50,
+    opacity: 0,
+    stagger: 0.2,
+    duration: 1,
+    ease: "bounce.out"
+});
+
+
+/* PORTADA-IMG */
 gsap.fromTo(".portada img",
     {
         y: 50,
@@ -33,40 +45,42 @@ document.querySelector(".portada img").addEventListener("mouseleave", function (
         });
 
 });
-gsap.registerPlugin(ScrollTrigger);
 
-gsap.fromTo(".title-portfolio",
-    {
-        y: 40,
-        opacity: 0
-    },
-    {
-        y: 0,
-        opacity: 2,
-        duration: 2,
-        scrollTrigger: {
-            trigger: ".portfolio",
-            start: "top 80%",
-            end: "bottom 20%",
-            scrub: true,
-        }
-    }
-);
+/* TITLE-HERO */
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.to(".title-hero", {
+    y: 0, 
+    opacity: 1, 
+    duration: 1, 
+    ease: "bounce"
+});
+const title = document.querySelector(".title-hero");
+
+title.addEventListener("mouseover", () => {
+    gsap.to(title, {
+        color: "#005cef",
+        duration: 0.3,
+        ease: "power1.out"
+    });
+});
+
+title.addEventListener("mouseleave", () => {
+    gsap.to(title, {
+        color: "black",
+        duration: 0.5,
+        ease: "power2.out"
+    });
+});
+
+/* SUBTITLE-HERO */
 
 const text = new SplitType('.subtitle-hero', { types: "words, chars" });
 
 text.chars.forEach((char, index) => {
     let charsTl = gsap.timeline({
         delay: 0.5,
-        /* scrollTrigger: {
-            trigger: ".hello-hero",
-            start: "top 80%",  // Cuando el elemento está en el 80% de la pantalla
-            end: "bottom 50%", // Finaliza cuando está al 50%
-            scrub: false,  */// No hace efecto scrub (sin seguimiento del scroll)
-        toggleActions: "play none none none" // Solo se ejecuta una vez
-        /*  } */
+            scrub: false,  
+        toggleActions: "play none none none"
     });
 
     charsTl.from(char, {
@@ -116,43 +130,16 @@ text.chars.forEach((char, index) => {
     char.addEventListener("mouseenter", charsHover);
 });
 
+/* HERO-P */
+gsap.from(".hero-p",{
+    opacity:0,
+    y: 50,
+    duration: 2,
+    delay: 1,
+    ease:"bounce.out"
+}) 
 
 
-
-
-gsap.to(".title-hero", {
-    y: 0, // Llega a su posición normal
-    opacity: 1, // Se vuelve visible
-    duration: 1, // Duración de la animación
-    ease: "bounce"
-});
-const title = document.querySelector(".title-hero");
-
-title.addEventListener("mouseover", () => {
-    gsap.to(title, {
-        color: "#005cef", // Cambia el color del texto
-        duration: 0.3,
-        ease: "power1.out"
-    });
-});
-
-title.addEventListener("mouseleave", () => {
-    gsap.to(title, {
-        color: "black",
-        duration: 0.5,
-        ease: "power2.out"
-    });
-});
-
-
-/* btn-eng */
-gsap.from(".btn-eng, .btn-eng i", {
-    y: -50, 
-    opacity: 0, 
-    stagger: 0.2, 
-    duration: 1, 
-    ease: "bounce.out" 
-});
 
 /* HELLO */
 
@@ -167,14 +154,79 @@ gsap.fromTo(
         color: "black"
     },
     {
-        opacity: 1, y: 0, color: "#ff5733",
-        stagger: 0.05, duration: 1, ease: "power2.out",
+        opacity: 1,
+        y: 0,
+        color: "#ff5733",
+        stagger: 0.05,
+        duration: 1,
+        ease: "power2.out",
         scrollTrigger: {
             trigger: ".hello",
-            start: "top 80%", 
-            end: "top 30%",    
+            start: "top 80%",
+            end: "top 30%",
             toggleActions: "play none reverse none",
             scrub: true
         }
     }
 );
+
+
+
+
+/* PORTFOLIO-P */
+
+const splitText = new SplitType(".portfolio-p", { types: "lines" });
+
+gsap.from(splitText.lines, {
+    opacity: 0,
+    y: 20,
+    duration: 1,
+    ease: "power3.out",
+    stagger: 0.2, 
+    scrollTrigger: {
+        trigger: ".portfolio-p",
+        start: "top 80%", 
+        end: "top 30%",
+        toggleActions: "play none none none", 
+    }
+});
+
+
+
+/* TITLE-PORTFOLIO */
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(".title-portfolio, .web-title",
+    {
+        y: 40,
+        opacity: 0
+    },
+    {
+        y: 0,
+        stagger:0.2,
+        opacity: 2,
+        duration: 2,
+        scrollTrigger: {
+            trigger: ".portfolio",
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: true,
+        }
+    }
+);
+
+gsap.from(".web-p",
+    {
+        y:20,
+        opacity:0,
+        stagger:0.5,
+        duration:1,
+        delay:0.3,
+        ease:"bounce.out",
+        scrollTrigger:{
+            trigger: ".web-p",
+            start: "top 80%",
+            end:"botttom 20%"
+        }
+    }
+)
