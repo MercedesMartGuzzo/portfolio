@@ -214,22 +214,24 @@ gsap.fromTo(".title-portfolio, .web-title",
         }
     }
 );
- 
-gsap.from(".web",
+
+ gsap.from(".web",
     {
-        y:20,
-        opacity:0,
+        y:60,
         stagger:0.7,
         duration:1,
         delay:0.5,
-        ease:"bounce.out",
+        ease:"power3.out",
         scrollTrigger:{
             trigger: ".web",
             start: "top 80%",
-            end:"botttom 20%"
+            end:"botttom 20%",
+            scrub: true
         }
     }
-) 
+)   
+   
+   
 
 
 

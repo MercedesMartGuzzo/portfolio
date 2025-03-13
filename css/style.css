@@ -198,9 +198,9 @@ h6 {
     left: 0;
     bottom: 0;
     background-color:
-        /*  var(--clr-title2); */
+         var(--clr-title2); 
         /* rgba(0, 0, 0, .85); */
-        #ff5733;
+      /*   #ff5733; */
     padding: 2rem;
     padding-right: 1rem;
     transform: translateX(-100%);
@@ -416,7 +416,7 @@ h6 {
     margin-top: 3rem;
     /*  padding-inline: 1rem; */
     width: 100%;
-    background-color: var(--clr-title);
+    background-color: var(--clr-text2);
 
 }
 
@@ -425,13 +425,13 @@ h6 {
 .about-me-title {
     display: flex;
     margin-top: 1rem;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--clr-text);
     text-align: start;
     margin-inline-start: 1rem;
     margin-bottom: 1rem;
-    color: var(--clr-text2);
+    color: var(--clr-title);
 
 }
 
@@ -448,21 +448,22 @@ h6 {
     /*   padding-inline: 1rem; */
     justify-content: center;
     text-align: start;
-    color: var(--clr-text2);
-    margin-top: 1.5rem;
+    color: var(--clr-title);
+    margin-top: 1.9rem;
     font-family: var(--ff-text);
     overflow: hidden;
     /*   white-space: normal;  */
     display: block;
-
+    margin-bottom: 2rem;
 }
 
-.web{
+.web {
     border: 1px solid var(--clr-text2);
-    padding: .5rem;
+    padding: 1rem;
     border-radius: 5px;
-    
+    width: 100%;
 }
+
 .web-p {
     margin-top: 1rem;
     justify-content: center;
@@ -474,9 +475,12 @@ h6 {
     padding: .3rem;
 
 }
-.web img{
+
+.web img {
     border-radius: 5px;
+   /* object-fit: cover; */
 }
+
 .web-wrap {
     margin-top: 1.5rem;
     width: 90vw;
@@ -487,7 +491,7 @@ h6 {
     margin-bottom: 3rem;
     overflow: hidden;
     gap: 1rem;
-   
+
 }
 
 .web-title {
@@ -496,24 +500,101 @@ h6 {
     padding-left: .3rem;
     /* margin-top: 1rem; */
 }
-.mini-swiper {
-    width: 100%;
-    max-width: 300px; /* Ajusta según el tamaño que necesites */
+
+/* .mini-swiper {
+    width: 100%; 
+ max-width: 390px; 
+  
     margin: auto;
+   
 }
 
 .mini-swiper img {
     width: 100%;
     border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+} */
+.mini-swiper {
+    width: 100%;
+    max-width: 600px;
+    height: 150px; 
+    margin: auto;
 }
 
+.mini-swiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+
+.btn-web {
+    background-color: transparent;
+    border: 1px solid var(--clr-text2);
+    color: var(--clr-text2);
+    font-size: 1.2rem;
+    font-family: var(--ff-title);
+    padding: 10px;
+    font-weight: 200;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: width 0.3s ease-in-out;
+    white-space: nowrap;
+    display: inline-block;
+    width: auto; /* Asegura que el tamaño inicial sea el del contenido */
+    min-width: 120px; /* Ajusta según el tamaño deseado */
+    text-align: center;
+}
+
+.btn-web:hover {
+    width: 180px; /* Expande solo hacia la derecha sin afectar el texto */
+}
+.card1 {
+    background-color:var(--clr-text2);
+    border: 1px solid  #005cef;
+    color: #005cef;
+}
+.card1 p,.card1 h3,.card1 button{
+    color: #005cef;  
+}
+.card1 button{
+    border: 1px solid  #005cef;  
+}
+.card2{
+    background-color: var(--clr-text2);
+    border: 1px solid var(--clr-title2);
+}
+.card2 p,.card2 h3,.card2 button{
+    color: var(--clr-title2)  
+}
+.card2 button{
+    border: 1px solid var(--clr-title2) 
+}
+.card3{
+    background-color:var(--clr-text2);
+    border: 1px solid #ff5733; 
+}
+
+.card3 p,.card3 h3,.card3 button{
+    color:#ff5733;  
+}
+
+.card3 button{
+    border: 1px solid #ff5733;  
+}
 
 
 /* ABOUT-ME */
 
 .about-me {
     width: 100%;
-    background-color:/*  #ff5733 *//* #607d56; */var(--clr-text2);
+    /* background-color: */
+        /*  #ff5733 */
+        /* #607d56; */
+       /*  var(--clr-text2); */
     min-height: 100vh;
 }
 
@@ -652,7 +733,7 @@ h6 {
     }
 
     .title-portfolio {
-        font-size: 3rem;
+        font-size: 3.5rem;
         margin-inline-start: 3rem;
     }
 
@@ -662,17 +743,20 @@ h6 {
         margin-top: 1rem;
     }
 
-      .web-wrap {
+    .web-wrap {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
-        overflow: hidden;
-    }  
+      /*   overflow: hidden; */
+    }
+
     .web {
         min-width: auto;
     }
-    .mini-swiper{
+
+    .mini-swiper {
         margin-top: 2rem;
         max-width: 500px;
+        height: auto;
     }
 }
