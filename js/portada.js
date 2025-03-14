@@ -49,9 +49,9 @@ document.querySelector(".portada img").addEventListener("mouseleave", function (
 /* TITLE-HERO */
 
 gsap.to(".title-hero", {
-    y: 0, 
-    opacity: 1, 
-    duration: 1, 
+    y: 0,
+    opacity: 1,
+    duration: 1,
     ease: "bounce"
 });
 const title = document.querySelector(".title-hero");
@@ -79,7 +79,7 @@ const text = new SplitType('.subtitle-hero', { types: "words, chars" });
 text.chars.forEach((char, index) => {
     let charsTl = gsap.timeline({
         delay: 0.5,
-            scrub: false,  
+        scrub: false,
         toggleActions: "play none none none"
     });
 
@@ -131,13 +131,13 @@ text.chars.forEach((char, index) => {
 });
 
 /* HERO-P */
-gsap.from(".hero-p",{
-    opacity:0,
+gsap.from(".hero-p", {
+    opacity: 0,
     y: 50,
     duration: 2,
     delay: 1,
-    ease:"bounce.out"
-}) 
+    ease: "bounce.out"
+})
 
 
 
@@ -182,12 +182,12 @@ gsap.from(splitText.lines, {
     y: 20,
     duration: 1,
     ease: "power3.out",
-    stagger: 0.2, 
+    stagger: 0.2,
     scrollTrigger: {
         trigger: ".portfolio-p",
-        start: "top 80%", 
+        start: "top 80%",
         end: "top 30%",
-        toggleActions: "play none none none", 
+        toggleActions: "play none none none",
     }
 });
 
@@ -203,7 +203,7 @@ gsap.fromTo(".title-portfolio, .web-title",
     },
     {
         y: 0,
-        stagger:0.2,
+        stagger: 0.5,
         opacity: 2,
         duration: 2,
         scrollTrigger: {
@@ -215,29 +215,22 @@ gsap.fromTo(".title-portfolio, .web-title",
     }
 );
 
- gsap.from(".web",
+gsap.from(".web",
     {
-        y:60,
-        stagger:0.7,
-        duration:1,
-        delay:0.5,
-        ease:"power3.out",
-        scrollTrigger:{
+        y: 60,
+        stagger: 0.7,
+        duration: 1,
+        delay: 0.5,
+        ease: "power3.out",
+        scrollTrigger: {
             trigger: ".web",
             start: "top 80%",
-            end:"botttom 20%",
-            scrub: true
+            end: "botttom 25%",
+           
+            scrub: true,
+            toggleActions: "play none none reverse"
         }
     }
-)   
-   
-   
-
-
-
-
-
-
-
+)
 
 

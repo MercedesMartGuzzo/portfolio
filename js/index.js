@@ -22,6 +22,8 @@ const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
 const menuItems = document.querySelectorAll(".nav a");
 
+
+
 abrir.addEventListener("click", () => {
     nav.classList.add("visible");
     abrir.style.display = "none";
@@ -47,3 +49,38 @@ menuItems.forEach(item => {
         }, 1000);
     });
 });
+
+
+/* OCULTAR HEADER */
+document.addEventListener("DOMContentLoaded", function () {
+
+    const header = document.querySelector("header");
+
+    ScrollTrigger.create({
+        trigger: "#portfolio", // El header solo se oculta al llegar aquí
+        start: "top top", // Se activa cuando #portfolio llega al top
+        onEnter: () => {
+            gsap.to(header, { y: "-100%", duration: 0.5, ease: "power2.out" });
+        },
+        onLeaveBack: () => {
+            gsap.to(header, { y: "0%", duration: 0.5, ease: "power2.out" });
+        }
+    });
+
+    // Ocultar al bajar, mostrar al subir
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener("scroll", () => {
+        let currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY && currentScrollY >= document.querySelector("#portfolio").offsetTop) {
+            gsap.to(header, { y: "-100%", duration: 0.5, ease: "power2.out" });
+        } else {
+            gsap.to(header, { y: "0%", duration: 0.5, ease: "power2.out" });
+        }
+
+        lastScrollY = currentScrollY;
+    });
+});
+
+
