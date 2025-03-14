@@ -57,26 +57,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector("header");
 
     ScrollTrigger.create({
-        trigger: "#portfolio", // El header solo se oculta al llegar aquí
-        start: "top top", // Se activa cuando #portfolio llega al top
+        trigger: "#portfolio",
+        start: "top top", 
         onEnter: () => {
-            gsap.to(header, { y: "-100%", duration: 0.5, ease: "power2.out" });
+            gsap.to(header, { y: "-100%", duration: 0.5, ease: "power3.out" });
         },
         onLeaveBack: () => {
-            gsap.to(header, { y: "0%", duration: 0.5, ease: "power2.out" });
+            gsap.to(header, { y: "0%", duration: 0.5, ease: "power3.out" });
         }
     });
 
-    // Ocultar al bajar, mostrar al subir
     let lastScrollY = window.scrollY;
 
     window.addEventListener("scroll", () => {
         let currentScrollY = window.scrollY;
 
         if (currentScrollY > lastScrollY && currentScrollY >= document.querySelector("#portfolio").offsetTop) {
-            gsap.to(header, { y: "-100%", duration: 0.5, ease: "power2.out" });
+            gsap.to(header, { y: "-100%", duration: 0.5, ease: "power3.out" });
         } else {
-            gsap.to(header, { y: "0%", duration: 0.5, ease: "power2.out" });
+            gsap.to(header, { y: "0%", duration: 0.5, ease: "power3.out" });
         }
 
         lastScrollY = currentScrollY;
