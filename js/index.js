@@ -1,5 +1,5 @@
 /* loader */
-document.onreadystatechange = function() {
+document.onreadystatechange = function () {
     if (document.readyState !== "complete") {
         document.querySelector("body").style.visibility = "hidden";
         document.querySelector("#spinner").style.visibility = "visible";
@@ -58,12 +58,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     ScrollTrigger.create({
         trigger: "#portfolio",
-        start: "top top", 
+        start: "top top",
         onEnter: () => {
-            gsap.to(header, { y: "-100%", duration: 0.5, ease: "power3.out" });
+            gsap.to(header, {
+                y: "-100%",
+                duration: 0.5,
+                ease: "power3.out"
+            });
         },
         onLeaveBack: () => {
-            gsap.to(header, { y: "0%", duration: 0.5, ease: "power3.out" });
+            gsap.to(header, {
+                y: "0%",
+                duration: 0.5,
+                ease: "power3.out"
+            });
         }
     });
 
@@ -73,9 +81,17 @@ document.addEventListener("DOMContentLoaded", function () {
         let currentScrollY = window.scrollY;
 
         if (currentScrollY > lastScrollY && currentScrollY >= document.querySelector("#portfolio").offsetTop) {
-            gsap.to(header, { y: "-100%", duration: 0.5, ease: "power3.out" });
+            gsap.to(header, {
+                y: "-100%",
+                duration: 0.5,
+                ease: "power3.out"
+            });
         } else {
-            gsap.to(header, { y: "0%", duration: 0.5, ease: "power3.out" });
+            gsap.to(header, {
+                y: "0%",
+                duration: 0.5,
+                ease: "power3.out"
+            });
         }
 
         lastScrollY = currentScrollY;

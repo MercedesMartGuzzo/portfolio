@@ -225,8 +225,7 @@ gsap.from(".web",
         scrollTrigger: {
             trigger: ".web",
             start: "top 80%",
-            end: "botttom 25%",
-           
+            end: "botttom 25%",       
             scrub: true,
             toggleActions: "play none none reverse"
         }
@@ -234,3 +233,16 @@ gsap.from(".web",
 )
 
 
+gsap.from(".about-me-title",
+    {
+        y: 40,
+        opacity: 0,
+        duration: 2,
+        scrollTrigger: {
+            trigger: ".about-me-title",
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: true
+        }
+    }
+);
