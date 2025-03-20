@@ -1,4 +1,4 @@
-const swipers = document.querySelectorAll('.mini-swiper');
+/* const swipers = document.querySelectorAll('.mini-swiper');
 
 swipers.forEach(swiperEl => {
     const swiper = new Swiper(swiperEl, {
@@ -30,3 +30,4 @@ swipers.forEach(swiperEl => {
     swiperEl.addEventListener("click", startAutoplay);
     swiperEl.addEventListener("mouseleave", stopAutoplay);
 });
+ */

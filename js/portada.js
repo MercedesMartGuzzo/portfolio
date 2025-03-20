@@ -196,7 +196,7 @@ gsap.from(splitText.lines, {
 /* TITLE-PORTFOLIO */
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.fromTo(".title-portfolio, .web-title",
+gsap.fromTo(".title-portfolio",
     {
         y: 40,
         opacity: 0
@@ -214,23 +214,53 @@ gsap.fromTo(".title-portfolio, .web-title",
         }
     }
 );
-
-gsap.from(".web",
-    {
+gsap.utils.toArray(".web").forEach((element) => {
+    gsap.from(element, {
         y: 60,
-        stagger: 0.7,
+        opacity: 0,
         duration: 1,
         delay: 0.5,
         ease: "power3.out",
         scrollTrigger: {
-            trigger: ".web",
+            trigger: element,
             start: "top 80%",
-            end: "botttom 25%",       
+            end: "bottom 25%",
             scrub: true,
             toggleActions: "play none none reverse"
         }
-    }
-)
+    });
+});
+
+
+
+
+
+// Usamos gsap.matchMedia para ejecutar la animación solo en desktop
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 1024px)", () => {
+    // Seleccionamos todas las tarjetas
+    let sections = gsap.utils.toArray(".web");
+
+    // Para cada tarjeta, creamos la animación
+    sections.forEach((section) => {
+        gsap.from(section, {
+            x: "100vw",        // Empieza fuera de la pantalla a la derecha
+            /*  opacity: 0, */
+            duration: 2,       // Animación pausada y fluida
+            ease: "power3-out",
+            scrollTrigger: {
+                trigger: section,
+                start: "top 80%", // Se activa cuando la parte superior de la sección llega al 80% del viewport
+                end: "top 30%",   // Termina la animación cuando la parte superior de la sección llega al 30%
+              
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+});
+
+
 
 
 gsap.from(".about-me-title",
@@ -246,3 +276,41 @@ gsap.from(".about-me-title",
         }
     }
 );
+document.addEventListener("DOMContentLoaded", () => {
+    const titles = document.querySelectorAll('.web-title, .skills-title'); // Seleccionamos los títulos
+
+    titles.forEach(title => {
+        let splitText = new SplitType(title, { types: "words, chars" }); // Divide en palabras y caracteres
+        let originalColor = window.getComputedStyle(title).color; // Obtiene el color original del texto
+
+        title.addEventListener("mouseenter", () => {
+            gsap.fromTo(splitText.chars, {
+                y: () => gsap.utils.random(-30, 30),
+                x: () => gsap.utils.random(-30, 30),
+                rotate: () => gsap.utils.random(-60, 60),
+                scale: () => gsap.utils.random(0.5, 1.5),
+                color: () => gsap.utils.random(["#ff5733", "#007bff", "#596d2d", "#ff1f25", "#9ba17d", "#cea965"]),
+                opacity: 0
+            }, {
+                y: 0,
+                x: 0,
+                rotate: 0,
+                scale: 1,
+                opacity: 1,
+                duration: 0.5,
+                stagger: 0.02,
+                ease: "back.out(2)"
+            });
+        });
+
+        title.addEventListener("mouseleave", () => {
+            gsap.to(splitText.chars, {
+                color: originalColor, // Vuelve al color original
+                duration: 0.5,
+                ease: "power2.out"
+            });
+        });
+    });
+});
+
+
