@@ -173,6 +173,10 @@ gsap.fromTo(
 
 
 
+
+
+
+
 /* PORTFOLIO-P */
 
 const splitText = new SplitType(".portfolio-p", { types: "lines" });
@@ -206,6 +210,7 @@ gsap.fromTo(".title-portfolio",
         stagger: 0.5,
         opacity: 2,
         duration: 2,
+        delay: .5,
         scrollTrigger: {
             trigger: ".portfolio",
             start: "top 80%",
@@ -224,8 +229,9 @@ gsap.utils.toArray(".web").forEach((element) => {
         scrollTrigger: {
             trigger: element,
             start: "top 80%",
-            end: "bottom 25%",
+            end: "bottom 65%",
             scrub: true,
+           
             toggleActions: "play none none reverse"
         }
     });
@@ -253,7 +259,7 @@ mm.add("(min-width: 1024px)", () => {
                 trigger: section,
                 start: "top 80%", // Se activa cuando la parte superior de la sección llega al 80% del viewport
                 end: "top 30%",   // Termina la animación cuando la parte superior de la sección llega al 30%
-              
+
                 toggleActions: "play none none reverse"
             }
         });
@@ -287,9 +293,9 @@ document.addEventListener("DOMContentLoaded", () => {
             gsap.fromTo(splitText.chars, {
                 y: () => gsap.utils.random(-30, 30),
                 x: () => gsap.utils.random(-30, 30),
-                rotate: () => gsap.utils.random(-60, 60),
-                scale: () => gsap.utils.random(0.5, 1.5),
-                color: () => gsap.utils.random(["#ff5733", "#007bff", "#596d2d", "#ff1f25", "#9ba17d", "#cea965"]),
+                rotate: () => gsap.utils.random(-80, 80),
+                scale: () => gsap.utils.random(0.9, 1.9),
+              /*   color: () => gsap.utils.random(["#ff5733", "#007bff", "#596d2d", "#ff1f25", "#9ba17d", "#cea965"]), */
                 opacity: 0
             }, {
                 y: 0,
@@ -297,19 +303,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 rotate: 0,
                 scale: 1,
                 opacity: 1,
-                duration: 0.5,
+                duration: .8,
                 stagger: 0.02,
-                ease: "back.out(2)"
+                ease: "back.out(3)"
             });
         });
 
-        title.addEventListener("mouseleave", () => {
+       /*  title.addEventListener("mouseleave", () => {
             gsap.to(splitText.chars, {
                 color: originalColor, // Vuelve al color original
                 duration: 0.5,
                 ease: "power2.out"
             });
-        });
+        }); */
     });
 });
 

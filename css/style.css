@@ -108,12 +108,9 @@ header::after {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 85vw;
-    /* Ajusta el ancho según sea necesario */
+    width: 87vw;
     height: 3px;
-    /* Ajusta el grosor del borde */
-    background-color: var(--clr-details);
-    /* Color del borde */
+    background-color: var(--clr-details); 
 }
 
 header.hidden {
@@ -420,6 +417,7 @@ h6 {
     font-family: var(--ff-text);
     font-size: 1rem;
     opacity: 1;
+  
 }
 
 
@@ -440,7 +438,7 @@ h6 {
 
 .portada img {
     width: 300px;
-    border-radius: 50%;
+    border-radius: 100%;
     background: var(--clr-title);
     padding-top: 10px;
     padding: .2px;
@@ -559,7 +557,27 @@ h6 {
     /* margin-top: 1rem; */
 }
 
+/* .mini-swiper {
+    width: 100%; 
+ max-width: 390px; 
+  
+    margin: auto;
+   
+}
 
+.mini-swiper img {
+    width: 100%;
+    border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+} */
+/* .img-card {
+    width: 100%;
+    max-width: 600px;
+    height: 150px;
+    margin: auto;
+    cursor: pointer;
+} */
 
 .img-card img {
     width: 100%;
@@ -815,8 +833,11 @@ h6 {
 
     .portada {
         margin-top: 0;
-    }
 
+    }
+.portada img{
+    width: 400px;
+}
     /* hero */
 
     .hero {
@@ -841,30 +862,44 @@ h6 {
     .title-portfolio,
     .about-me-title {
         font-size: 3.5rem;
-        margin-inline-start: 3rem;
+        margin-inline-start: 3.2rem;
     }
-
+.hero-p{
+    line-height: 1.5; 
+}
     .hello {
         grid-column: span 2;
-        font-size: 3.5rem;
+        font-size: 3.6rem;
         margin-top: 1rem;
+        width: 100%;
+       margin-left: -1.8rem;
     }
-
+/* portfolio */
+.portfolio-p{
+    font-size: 1.1rem;
+    margin-top: 2.5rem;
+    line-height: 1.8;
+}
     .web-wrap {
         /*  display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  */
         gap: 2rem;
         overflow: hidden;
         margin-top: 2.5rem;
+        margin-bottom: 3rem;
     }
 
     .web {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-
+       height: auto;
     }
-
+.web-btn-wrapp{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
     .web button {
         display: grid;
         grid-column: 2 / 3;
