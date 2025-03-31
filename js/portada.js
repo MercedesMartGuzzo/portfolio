@@ -185,6 +185,7 @@ gsap.from(splitText.lines, {
     opacity: 0,
     y: 20,
     duration: 1,
+   /*  delay:1, */
     ease: "power3.out",
     stagger: 0.2,
     scrollTrigger: {
@@ -207,15 +208,16 @@ gsap.fromTo(".title-portfolio",
     },
     {
         y: 0,
-        stagger: 0.5,
+      /*   stagger: 0.5, */
         opacity: 2,
         duration: 2,
         delay: .5,
         scrollTrigger: {
             trigger: ".portfolio",
             start: "top 80%",
-            end: "bottom 20%",
+            end: "top 50%",
             scrub: true,
+           
         }
     }
 );
@@ -319,4 +321,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+/* viedos de card de portfolio */
+
+document.querySelectorAll('.img-wrapper video').forEach(video => {
+    ScrollTrigger.create({
+        trigger: video,
+        start: "top 80%", // Cuando el video esté al 80% de la pantalla
+        end: "bottom 20%", // Cuando salga del 20% inferior
+        onEnter: () => video.play(),
+        onLeave: () => {
+            video.pause();
+            video.currentTime = 0; // Reinicia el video al salir
+        },
+        onEnterBack: () => video.play(), // Vuelve a reproducirse al entrar de nuevo
+        onLeaveBack: () => {
+            video.pause();
+            video.currentTime = 0;
+        }
+    });
+});
 
