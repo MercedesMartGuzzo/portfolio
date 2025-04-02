@@ -99,7 +99,6 @@ text.chars.forEach((char, index) => {
         duration: 1,
     }, "-=.25");
 
-    // Animación al pasar el mouse
     let charOriginalColor = window.getComputedStyle(char).color;
 
     function charsHover() {
@@ -131,6 +130,7 @@ text.chars.forEach((char, index) => {
 });
 
 /* HERO-P */
+
 gsap.from(".hero-p", {
     opacity: 0,
     y: 50,
@@ -243,24 +243,20 @@ gsap.utils.toArray(".web").forEach((element) => {
 
 
 
-// Usamos gsap.matchMedia para ejecutar la animación solo en desktop
+
 let mm = gsap.matchMedia();
 
 mm.add("(min-width: 1024px)", () => {
-    // Seleccionamos todas las tarjetas
     let sections = gsap.utils.toArray(".web");
-
-    // Para cada tarjeta, creamos la animación
     sections.forEach((section) => {
         gsap.from(section, {
-            x: "100vw",        // Empieza fuera de la pantalla a la derecha
-            /*  opacity: 0, */
-            duration: 2,       // Animación pausada y fluida
+            x: "100vw",       
+            duration: 2,       
             ease: "power3-out",
             scrollTrigger: {
                 trigger: section,
-                start: "top 80%", // Se activa cuando la parte superior de la sección llega al 80% del viewport
-                end: "top 30%",   // Termina la animación cuando la parte superior de la sección llega al 30%
+                start: "top 80%", 
+                end: "top 30%", 
 
                 toggleActions: "play none none reverse"
             }
@@ -285,11 +281,11 @@ gsap.from(".about-me-title",
     }
 );
 document.addEventListener("DOMContentLoaded", () => {
-    const titles = document.querySelectorAll('.web-title, .skills-title'); // Seleccionamos los títulos
+    const titles = document.querySelectorAll('.web-title, .skills-title'); 
 
     titles.forEach(title => {
-        let splitText = new SplitType(title, { types: "words, chars" }); // Divide en palabras y caracteres
-        let originalColor = window.getComputedStyle(title).color; // Obtiene el color original del texto
+        let splitText = new SplitType(title, { types: "words, chars" }); 
+        let originalColor = window.getComputedStyle(title).color; 
 
         title.addEventListener("mouseenter", () => {
             gsap.fromTo(splitText.chars, {
@@ -323,22 +319,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* viedos de card de portfolio */
-
-document.querySelectorAll('.img-wrapper video').forEach(video => {
+ document.querySelectorAll('.img-wrapper video').forEach(video => {
     ScrollTrigger.create({
         trigger: video,
-        start: "top 80%", // Cuando el video esté al 80% de la pantalla
-        end: "bottom 20%", // Cuando salga del 20% inferior
+        start: "top 80%", 
+        end: "bottom 20%", 
         onEnter: () => video.play(),
         onLeave: () => {
             video.pause();
-            video.currentTime = 0; // Reinicia el video al salir
+            video.currentTime = 0; 
         },
-        onEnterBack: () => video.play(), // Vuelve a reproducirse al entrar de nuevo
+        onEnterBack: () => video.play(), 
         onLeaveBack: () => {
             video.pause();
             video.currentTime = 0;
         }
     });
-});
+}); 
 

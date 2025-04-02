@@ -52,12 +52,12 @@ menuItems.forEach(item => {
 
 
 /* OCULTAR HEADER */
-document.addEventListener("DOMContentLoaded", function () {
+/*   document.addEventListener("DOMContentLoaded", function () {
 
     const header = document.querySelector("header");
 
     ScrollTrigger.create({
-        trigger: "#portfolio",
+        trigger: ".title-hero",
         start: "top top",
         onEnter: () => {
             gsap.to(header, {
@@ -75,12 +75,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    let lastScrollY = window.scrollY;
+     let lastScrollY = window.scrollY;
 
     window.addEventListener("scroll", () => {
         let currentScrollY = window.scrollY;
 
-        if (currentScrollY > lastScrollY && currentScrollY >= document.querySelector("#portfolio").offsetTop) {
+        if (currentScrollY > lastScrollY && currentScrollY >= document.querySelector(".title-hero").offsetTop) {
             gsap.to(header, {
                 y: "-100%",
                 duration: 0.5,
@@ -95,8 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         lastScrollY = currentScrollY;
-    });
-});
+    }); 
+});  */ 
 
 
 /* VIDEO CARDS */
