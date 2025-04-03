@@ -374,8 +374,8 @@ h6 {
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     width: 90vw;
     position: relative;
@@ -388,7 +388,7 @@ h6 {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--clr-details);
-    text-align: start;
+    text-align: center;
     margin-bottom: 1rem;
     font-family: var(--ff-title);
     text-wrap: nowrap;
@@ -420,9 +420,8 @@ h6 {
 
 .portada {
     margin-top: 1rem;
-
-    padding-top: 1rem;
     width: 100%;
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -431,18 +430,18 @@ h6 {
     position: relative;
     min-height: 300px;
     overflow: visible;
+    background-color: white;
 }
 
 .portada img {
-    width: 300px;
-    border-radius: 100%;
-    background: var(--clr-title);
+   width: 230px; 
+     border-radius: 100%;
     padding-top: 10px;
     padding: .2px;
     padding-bottom: .3px;
     display: block;
-    position: relative;
     justify-content: center;
+    position: absolute;
 }
 
 .hello {
@@ -451,10 +450,11 @@ h6 {
     font-family: var(--ff-title);
     font-size: 2rem;
     color: var(--clr-details);
-    margin-top: 3rem;
+    margin-top: 6rem;
     text-align: center;
     justify-content: center;
     overflow-y: visible;
+    text-wrap: nowrap;
 }
 
 /* PORTOFOLIO */
@@ -750,22 +750,25 @@ h6 {
     /* PORTADA */
 
     .portada {
-        margin-top: 0;
+        margin-top: 0rem;
 
     }
 
     .portada img {
-        width: 400px;
+        width: 300px;
+        margin-top: 4rem;
     }
+    
 
     /* HERO */
 
     .hero {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding-top: 1rem;
+        padding-top: 0;
         width: 90vw;
         min-height: 100vh;
+        margin-top: 0;
     }
 
     .title-hero {
@@ -794,7 +797,7 @@ h6 {
     .hello {
         grid-column: span 2;
         font-size: 3.6rem;
-        margin-top: 1rem;
+        margin-top: 12rem;
         width: 100%;
         margin-left: -1.8rem;
     }

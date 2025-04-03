@@ -1,3 +1,4 @@
+//HEADER//
 
 /* btn-eng */
 gsap.from(".btn-eng, .btn-eng i", {
@@ -9,42 +10,8 @@ gsap.from(".btn-eng, .btn-eng i", {
 });
 
 
-/* PORTADA-IMG */
-gsap.fromTo(".portada img",
-    {
-        y: 50,
-        opacity: 0,
-        backgroundColor: "#ff1f25",
-    },
-    {
-        y: 0, opacity: 1,
-        backgroundColor: "#005cef",
-        duration: 1.5,
-        ease: "power2.out",
-        delay: 0.5
-    }
-);
+//HERO//
 
-/* HOVER PORTADA */
-
-document.querySelector(".portada img").addEventListener("mouseenter", function () {
-    gsap.to(this,
-        {
-            rotation: 10,
-            backgroundColor: /* "#ff1f25" */"#ff1f25",
-            duration: 0.5
-        });
-});
-
-document.querySelector(".portada img").addEventListener("mouseleave", function () {
-    gsap.to(this,
-        {
-            rotation: 0,
-            backgroundColor: /* "#ffdd18" */"#005cef",
-            duration: 0.5
-        });
-
-});
 
 /* TITLE-HERO */
 
@@ -140,11 +107,51 @@ gsap.from(".hero-p", {
 })
 
 
+/* PORTADA-IMG */
+gsap.fromTo(".portada img",
+    {
+        y: 50,
+        opacity: 0,
+        backgroundColor:  "#005cef",
+    },
+    {
+        y: 0, opacity: 1,
+        backgroundColor:/*  "#005cef */"white",
+        duration: 1.5,
+        ease: "power2.out",
+        delay: 0.5
+    }
+);
+
+/* HOVER PORTADA */
+
+document.querySelector(".portada img").addEventListener("mouseenter", function () {
+    gsap.to(this,
+        {
+            rotation: 10,
+            backgroundColor:"black",/* "#ff1f25" *//* "#ff1f25" */
+            duration: 0.5
+        });
+});
+
+document.querySelector(".portada img").addEventListener("mouseleave", function () {
+    gsap.to(this,
+        {
+            rotation: 0,
+            backgroundColor:"", /* "#ffdd18" *//* "#005cef", */
+            duration: 0.5
+        });
+
+});
+
+
+
+
 
 /* HELLO */
 
 
-const text1 = new SplitType(".hello h3", { types: "words, chars" });
+/* const text1 = new SplitType(".hello h3", { types: "words, chars" });
 
 gsap.fromTo(
     text1.chars,
@@ -168,13 +175,49 @@ gsap.fromTo(
             scrub: true
         }
     }
+); */
+const hello = document.querySelector(".hello h3");
+const textWidth = hello.offsetWidth; // Obtiene el ancho del texto
+
+gsap.fromTo(
+    ".hello h3",
+    { x: `-${textWidth}px`, color: "black" }, // Empieza fuera de la pantalla por la izquierda
+    {
+        x: "120vw",
+        duration: 5,
+        color: "#ff5733",
+        delay: 1,
+        repeat: -1, // Loop infinito
+        ease: "linear",
+    }
 );
 
+ //PORTFOLIO//
 
 
+/* TITLE-PORTFOLIO */
 
+gsap.registerPlugin(ScrollTrigger);
 
-
+gsap.fromTo(".title-portfolio",
+    {
+        y: 40,
+        opacity: 0
+    },
+    {
+        y: 0,
+        /*   stagger: 0.5, */
+        opacity: 2,
+        duration: 2,
+        delay: .5,
+        scrollTrigger: {
+            trigger: ".portfolio",
+            start: "top 80%",
+            end: "top 50%",
+            scrub: true,
+        }
+    }
+);
 
 
 /* PORTFOLIO-P */
@@ -185,7 +228,7 @@ gsap.from(splitText.lines, {
     opacity: 0,
     y: 20,
     duration: 1,
-   /*  delay:1, */
+    /*  delay:1, */
     ease: "power3.out",
     stagger: 0.2,
     scrollTrigger: {
@@ -196,31 +239,8 @@ gsap.from(splitText.lines, {
     }
 });
 
+//CARD-PORTFOLIO//
 
-
-/* TITLE-PORTFOLIO */
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.fromTo(".title-portfolio",
-    {
-        y: 40,
-        opacity: 0
-    },
-    {
-        y: 0,
-      /*   stagger: 0.5, */
-        opacity: 2,
-        duration: 2,
-        delay: .5,
-        scrollTrigger: {
-            trigger: ".portfolio",
-            start: "top 80%",
-            end: "top 50%",
-            scrub: true,
-           
-        }
-    }
-);
 gsap.utils.toArray(".web").forEach((element) => {
     gsap.from(element, {
         y: 60,
@@ -233,7 +253,7 @@ gsap.utils.toArray(".web").forEach((element) => {
             start: "top 80%",
             end: "bottom 65%",
             scrub: true,
-           
+
             toggleActions: "play none none reverse"
         }
     });
@@ -241,7 +261,7 @@ gsap.utils.toArray(".web").forEach((element) => {
 
 
 
-
+//CARD-PORTFOLIO-DESKTOP
 
 
 let mm = gsap.matchMedia();
@@ -250,13 +270,13 @@ mm.add("(min-width: 1024px)", () => {
     let sections = gsap.utils.toArray(".web");
     sections.forEach((section) => {
         gsap.from(section, {
-            x: "100vw",       
-            duration: 2,       
+            x: "100vw",
+            duration: 2,
             ease: "power3-out",
             scrollTrigger: {
                 trigger: section,
-                start: "top 80%", 
-                end: "top 30%", 
+                start: "top 80%",
+                end: "top 30%",
 
                 toggleActions: "play none none reverse"
             }
@@ -264,8 +284,29 @@ mm.add("(min-width: 1024px)", () => {
     });
 });
 
+// PORFOLIO-VIDEOS //
+
+document.querySelectorAll('.img-wrapper video').forEach(video => {
+    ScrollTrigger.create({
+        trigger: video,
+        start: "top 80%",
+        end: "bottom 20%",
+        onEnter: () => video.play(),
+        onLeave: () => {
+            video.pause();
+            video.currentTime = 0;
+        },
+        onEnterBack: () => video.play(),
+        onLeaveBack: () => {
+            video.pause();
+            video.currentTime = 0;
+        }
+    });
+});
 
 
+
+//ABOUT ME//
 
 gsap.from(".about-me-title",
     {
@@ -280,60 +321,8 @@ gsap.from(".about-me-title",
         }
     }
 );
-document.addEventListener("DOMContentLoaded", () => {
-    const titles = document.querySelectorAll('.web-title, .skills-title'); 
-
-    titles.forEach(title => {
-        let splitText = new SplitType(title, { types: "words, chars" }); 
-        let originalColor = window.getComputedStyle(title).color; 
-
-        title.addEventListener("mouseenter", () => {
-            gsap.fromTo(splitText.chars, {
-                y: () => gsap.utils.random(-30, 30),
-                x: () => gsap.utils.random(-30, 30),
-                rotate: () => gsap.utils.random(-80, 80),
-                scale: () => gsap.utils.random(0.9, 1.9),
-              /*   color: () => gsap.utils.random(["#ff5733", "#007bff", "#596d2d", "#ff1f25", "#9ba17d", "#cea965"]), */
-                opacity: 0
-            }, {
-                y: 0,
-                x: 0,
-                rotate: 0,
-                scale: 1,
-                opacity: 1,
-                duration: .8,
-                stagger: 0.02,
-                ease: "back.out(3)"
-            });
-        });
-
-       /*  title.addEventListener("mouseleave", () => {
-            gsap.to(splitText.chars, {
-                color: originalColor, // Vuelve al color original
-                duration: 0.5,
-                ease: "power2.out"
-            });
-        }); */
-    });
-});
 
 
-/* viedos de card de portfolio */
- document.querySelectorAll('.img-wrapper video').forEach(video => {
-    ScrollTrigger.create({
-        trigger: video,
-        start: "top 80%", 
-        end: "bottom 20%", 
-        onEnter: () => video.play(),
-        onLeave: () => {
-            video.pause();
-            video.currentTime = 0; 
-        },
-        onEnterBack: () => video.play(), 
-        onLeaveBack: () => {
-            video.pause();
-            video.currentTime = 0;
-        }
-    });
-}); 
+
+
 
