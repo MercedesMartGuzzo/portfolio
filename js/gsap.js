@@ -21,23 +21,7 @@ gsap.to(".title-hero", {
     duration: 1,
     ease: "bounce"
 });
-const title = document.querySelector(".title-hero");
 
-title.addEventListener("mouseover", () => {
-    gsap.to(title, {
-        color: "#005cef",
-        duration: 0.3,
-        ease: "power1.out"
-    });
-});
-
-title.addEventListener("mouseleave", () => {
-    gsap.to(title, {
-        color: "black",
-        duration: 0.5,
-        ease: "power2.out"
-    });
-});
 
 /* SUBTITLE-HERO */
 
@@ -176,21 +160,27 @@ gsap.fromTo(
         }
     }
 ); */
+
+
 const hello = document.querySelector(".hello h3");
-const textWidth = hello.offsetWidth; // Obtiene el ancho del texto
+const textWidth = hello.offsetWidth; 
 
 gsap.fromTo(
     ".hello h3",
-    { x: `-${textWidth}px`, color: "black" }, // Empieza fuera de la pantalla por la izquierda
+    { x: `-${textWidth}px`, color: "black" }, 
     {
-        x: "120vw",
+        x: "100vw",
         duration: 5,
         color: "#ff5733",
         delay: 1,
-        repeat: -1, // Loop infinito
+        repeat: -1,
         ease: "linear",
     }
-);
+); 
+
+
+
+
 
  //PORTFOLIO//
 
