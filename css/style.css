@@ -45,7 +45,7 @@
 }
 
 a {
-    /*  color: #ececec; */
+    color: none;
     text-decoration: none;
 }
 
@@ -210,6 +210,7 @@ h6 {
     opacity: 1;
     visibility: visible;
     max-height: 100vh;
+    width: 100%;
     transform: translateX(0);
     transition: opacity 1s ease-in-out, max-height 1s ease-in-out, transform 1s ease-in-out;
     backdrop-filter: blur(5px);
@@ -347,9 +348,6 @@ h6 {
     font-family: var(--ff-title);
     margin-left: auto;
     justify-content: end;
-
-
-
 }
 
 .btn-eng>button,
@@ -466,8 +464,7 @@ h6 {
 
 /* PORTOFOLIO */
 
-.portfolio,
-.contact {
+.portfolio {
     display: flex;
     flex-direction: column;
     width: 90vw;
@@ -606,8 +603,8 @@ h6 {
 
 .card1 {
     background-color: white;
-    border: 1px solid var(--clr-title);
-    color: var(--clr-title);
+    border: 1px solid #964b00;
+    color:#964b00;
 }
 
 .card1 p,
@@ -621,16 +618,15 @@ h6 {
 
 .card1 h3,
 .card1 button {
-    color: var(--clr-title)
+    color:#964b00;
 }
 
 .card1 button {
-    border: 1px solid var(--clr-title)
-
+    border: 1px solid #964b00;
 }
 
 .card1 button:hover {
-    background-color: var(--clr-title);
+    background-color: #964b00;
     color: var(--clr-text2);
 }
 
@@ -781,6 +777,99 @@ ul.featureList li {
     transform: scale(1.1);
 }
 
+/* CONTACT */
+.email {
+    /* color: var(--clr-text2); */
+    font-family: var(--ff-title);
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+.email a {
+    color: var(--clr-text);
+    transition: color .3s ease-in-out;
+
+}
+
+.email a:hover {
+    color: var(--clr-details);
+
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    background-color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    scroll-margin-top: .5rem;
+    margin-bottom: 3rem;
+
+}
+
+.contact-title {
+    color: var(--clr-text)
+}
+
+/* FOOTER */
+.footer {
+    width: 90vw;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+    padding-bottom: 1rem;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 2rem;
+    padding-top: 2rem;
+
+}
+
+.footer-list a i {
+    color: var(--clr-details);
+    transition: color .3s, transform .3s ease-in-out;
+    font-size: 2rem;
+    display: flex;
+}
+
+.footer-list a i:hover {
+    color: var(--clr-title);
+    transform: scale(1.1);
+}
+
+/* .rope {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform-origin: center;
+} */
+
+.rope-container {
+    width: 100%;
+    height: 40px;
+    overflow: visible;
+    position: relative;
+}
+
+.rope {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
 /* Media query para dispositivos más pequeños que 360px */
 @media (max-width: 360px) {
     .title-hero {
@@ -791,6 +880,11 @@ ul.featureList li {
 
     .nav {
         width: 70vw;
+
+    }
+
+    .nav-list li a {
+        font-size: 3.1rem;
     }
 }
 
@@ -814,25 +908,25 @@ ul.featureList li {
         align-items: start;
     }
 
+    .nav.nav.visible {
+        width: 50vw
+    }
+
     .nav-list li a {
-        font-size: 4rem;
+        font-size: 5rem;
 
     }
 
     .nav-list {
         gap: 6rem;
+        padding-left: 1.5rem;
     }
 
-    .nav-link {
-        color: #2b212b;
-        transition: color .2s, 1s ease;
-
-    }
 
     .nav-list li {
         position: relative;
         overflow: hidden;
-        height: 4rem;
+        height: 5rem;
     }
 
     .btn-eng {
@@ -881,6 +975,8 @@ ul.featureList li {
     .contact-title {
         font-size: 3.5rem;
     }
+
+
 
     .hero-p {
         line-height: 1.5;
@@ -997,6 +1093,25 @@ ul.featureList li {
         grid-area: wp;
     }
 
+    /* CONTACT */
+    .email p {
+        font-size: 1.3rem;
+        text-wrap: nowrap;
+    }
+
+    /* FOOTER */
+    .footer-list {
+        gap: 3rem;
+
+    }
+
+    .footer-list a i {
+        font-size: 2.5rem;
+    }
+
+    .footer {
+        padding-bottom: 1rem;
+    }
 }
 
 

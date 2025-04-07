@@ -96,7 +96,7 @@ gsap.fromTo(".portada img",
     {
         y: 50,
         opacity: 0,
-        backgroundColor:  "#005cef",
+        backgroundColor: "#005cef",
     },
     {
         y: 0, opacity: 1,
@@ -113,7 +113,7 @@ document.querySelector(".portada img").addEventListener("mouseenter", function (
     gsap.to(this,
         {
             rotation: 10,
-            backgroundColor:"black",/* "#ff1f25" *//* "#ff1f25" */
+            backgroundColor: "black",/* "#ff1f25" *//* "#ff1f25" */
             duration: 0.5
         });
 });
@@ -122,7 +122,7 @@ document.querySelector(".portada img").addEventListener("mouseleave", function (
     gsap.to(this,
         {
             rotation: 0,
-            backgroundColor:"", /* "#ffdd18" *//* "#005cef", */
+            backgroundColor: "", /* "#ffdd18" *//* "#005cef", */
             duration: 0.5
         });
 
@@ -163,11 +163,11 @@ gsap.fromTo(
 
 
 const hello = document.querySelector(".hello h3");
-const textWidth = hello.offsetWidth; 
+const textWidth = hello.offsetWidth;
 
 gsap.fromTo(
     ".hello h3",
-    { x: `-${textWidth}px`, color: "black" }, 
+    { x: `-${textWidth}px`, color: "black" },
     {
         x: "100vw",
         duration: 5,
@@ -176,13 +176,13 @@ gsap.fromTo(
         repeat: -1,
         ease: "linear",
     }
-); 
+);
 
 
 
 
 
- //PORTFOLIO//
+//PORTFOLIO//
 
 
 /* TITLE-PORTFOLIO */
@@ -312,7 +312,43 @@ gsap.from(".about-me-title",
     }
 );
 
+gsap.from(".contact-title",
+    {
+        y: 40,
+        opacity: 0,
+        duration: 2,
+        scrollTrigger: {
+            trigger: ".contact-title",
+            start: "top 90%",
+            end: "bottom 85%",
+            scrub: true,
+        }
+    }
+)
 
 
+const path = document.querySelector(".rope path");
+
+document.querySelector(".rope").addEventListener("mousemove", (e) => {
+    const y = e.offsetY;
 
 
+    const isUp = y < 20;
+    const controlY = isUp ? 5 : 35;
+
+    const d = `M0,20 Q500,${controlY} 1000,20`;
+    gsap.to(path, {
+        attr: { d },
+          duration: 0.3,
+         ease: "power2.out" 
+        
+    });
+});
+
+document.querySelector(".rope").addEventListener("mouseleave", () => {
+    gsap.to(path, {
+        attr: { d: "M0,20 Q500,20 1000,20" },
+        duration: 0.5,
+        ease: "elastic.out(1, 0.3)"
+    });
+});
