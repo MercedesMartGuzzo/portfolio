@@ -52,7 +52,7 @@ menuItems.forEach(item => {
 
 
 /* OCULTAR HEADER */
-   document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
     const header = document.querySelector("header");
 
@@ -75,7 +75,7 @@ menuItems.forEach(item => {
         }
     });
 
-     let lastScrollY = window.scrollY;
+    let lastScrollY = window.scrollY;
 
     window.addEventListener("scroll", () => {
         let currentScrollY = window.scrollY;
@@ -95,13 +95,13 @@ menuItems.forEach(item => {
         }
 
         lastScrollY = currentScrollY;
-    }); 
-});   
+    });
+});
 
 
 /* toggle-btn */
 document.querySelectorAll(".toggleBtn").forEach(button => {
-    button.addEventListener("click", function() {
+    button.addEventListener("click", function () {
         let container = this.closest("div"); // Encuentra el div contenedor más cercano
         let title = container.querySelector(".featureTitle"); // Encuentra el título dentro del div
         let list = container.querySelector(".featureList"); // Encuentra la lista dentro del div
@@ -110,7 +110,7 @@ document.querySelectorAll(".toggleBtn").forEach(button => {
         // Alternar visibilidad
         title.classList.toggle("hidden");
         list.classList.toggle("hidden");
-        
+
         // Alternar icono de flecha
         icon.classList.toggle("bi-arrow-down");
         icon.classList.toggle("bi-arrow-up");
@@ -119,8 +119,8 @@ document.querySelectorAll(".toggleBtn").forEach(button => {
 
 
 
- document.querySelectorAll(".certificado img").forEach(certificado => {
-    certificado.addEventListener("click", function() {
+document.querySelectorAll(".certificado img").forEach(certificado => {
+    certificado.addEventListener("click", function () {
         // Create modal container
         const modal = document.createElement("div");
         modal.style.position = "fixed";
@@ -152,5 +152,28 @@ document.querySelectorAll(".toggleBtn").forEach(button => {
             document.body.removeChild(modal);
         });
     });
-}); 
+});
 
+/* FADE-IN CERTIFICADOS */
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Selecciona todos los elementos que deseas animar
+    const elements = document.querySelectorAll('.fade-in');
+
+    // Crear el observer
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, {
+        threshold: 0.05// 10% del elemento visible
+    });
+
+    // Observar todos los elementos seleccionados
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});

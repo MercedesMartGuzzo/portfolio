@@ -142,8 +142,8 @@ h6 {
 #spinner {
     position: fixed;
     inset: 0;
-
-    color: var(--clr-title2);
+    background-color: var(--clr-text);
+    color: var(--clr-text2);
     z-index: 99999999;
     font-size: 3rem;
     display: flex;
@@ -367,6 +367,70 @@ h6 {
     color: var(--clr-title)
 }
 
+/* DARK-MODDE */
+body.dark-mode {
+    background-color: var(--clr-details);
+    color: var(--clr-text2);
+}
+
+body.dark-mode header {
+    background-color: var(--clr-details);
+
+}
+
+body.dark-mode header::after {
+    background-color: var(--clr-text2);
+}
+
+body.dark-mode .nav {
+    background-color: #e0e0e0eb;
+
+}
+
+body.dark-mode .nav-list li a,
+body.dark-mode .cerrar-menu {
+    color: var(--clr-details);
+}
+
+body.dark-mode .hero h1,
+
+body.dark-mode .abrir-menu,
+body.dark-mode .btn-eng>a,
+body.dark-mode .hero-p,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode .web h3,
+body.dark-mode .web h5,
+body.dark-mode .web .featureList,
+body.dark-mode .web h4,
+body.dark-mode .web button,
+body.dark-mode .footer-list a i,
+body.dark-mode .hello h3,
+body.dark-mode .email a:hover {
+    color: var(--clr-text2);
+}
+
+body.dark-mode .rope path {
+    stroke: var(--clr-text2);
+}
+
+body.dark-mode .web,
+body.dark-mode .web button {
+    border: 1px solid var(--clr-text2)
+}
+
+body.dark-mode .web button:hover {
+    background-color: var(--clr-text2);
+    color: var(--clr-details);
+}
+
+body.dark-mode .btn-eng>a:hover,
+body.dark-mode .abrir-menu:hover,
+body.dark-mode .footer-list a i:hover {
+    color: var(--clr-title);
+}
+
 /* HERO */
 
 .hero {
@@ -468,7 +532,7 @@ h6 {
     display: flex;
     flex-direction: column;
     width: 90vw;
-    background-color: white;
+
     padding-top: 1rem;
     padding-bottom: 1rem;
     scroll-margin-top: .5rem;
@@ -602,9 +666,8 @@ h6 {
 }
 
 .card1 {
-    background-color: white;
     border: 1px solid #964b00;
-    color:#964b00;
+    color: #964b00;
 }
 
 .card1 p,
@@ -618,7 +681,7 @@ h6 {
 
 .card1 h3,
 .card1 button {
-    color:#964b00;
+    color: #964b00;
 }
 
 .card1 button {
@@ -631,7 +694,7 @@ h6 {
 }
 
 .card2 {
-    background-color: white;
+
     border: 1px solid
         /*  var(--clr-title2); */
         #361a36;
@@ -661,7 +724,7 @@ h6 {
 }
 
 .card3 {
-    background-color: white;
+
     border: 1px solid #223307
         /* #ff5733 */
     ;
@@ -803,7 +866,6 @@ ul.featureList li {
     display: flex;
     flex-direction: column;
     width: 90vw;
-    background-color: white;
     padding-top: 1rem;
     padding-bottom: 1rem;
     scroll-margin-top: .5rem;
@@ -815,14 +877,23 @@ ul.featureList li {
     color: var(--clr-text)
 }
 
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
 /* FOOTER */
 .footer {
     width: 90vw;
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+   /*  align-items: end; */
     position: relative;
     overflow: visible;
     padding-bottom: 1rem;
@@ -848,7 +919,20 @@ ul.featureList li {
     color: var(--clr-title);
     transform: scale(1.1);
 }
-
+.copi{
+    display: flex;
+    justify-content: end;
+    font-family: var(--ff-title);
+    color: var(--clr-text);
+    margin-top: .5rem;
+    margin-bottom: .3rem;
+    align-items: end;
+}
+.copi p{
+    display: flex;
+   flex-direction: row;
+    align-self: end;
+}
 /* .rope {
     width: 100%;
     height: 2px;
@@ -868,6 +952,11 @@ ul.featureList li {
     height: 100%;
     cursor: pointer;
     pointer-events: auto;
+}
+
+.rope path {
+    stroke: black;
+
 }
 
 /* Media query para dispositivos más pequeños que 360px */

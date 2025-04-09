@@ -162,7 +162,7 @@ gsap.fromTo(
 ); */
 
 
-const hello = document.querySelector(".hello h3");
+/* const hello = document.querySelector(".hello h3");
 const textWidth = hello.offsetWidth;
 
 gsap.fromTo(
@@ -176,9 +176,28 @@ gsap.fromTo(
         repeat: -1,
         ease: "linear",
     }
+); */
+const hello = document.querySelector(".hello h3");
+const textWidth = hello.offsetWidth;
+
+// Detectar si el body tiene la clase dark-mode
+const isDarkMode = document.body.classList.contains("dark-mode");
+
+// Elegir el color según el modo
+const color = isDarkMode ? "#00ffee" : "tomato"; // poné los colores que quieras para cada modo
+
+gsap.fromTo(
+  ".hello h3",
+  { x: `-${textWidth}px`, color: isDarkMode ? "white" : "black" },
+  {
+    x: "100vw",
+    duration: 5,
+    color: color,
+    delay: 1,
+    repeat: -1,
+    ease: "linear",
+  }
 );
-
-
 
 
 
@@ -267,7 +286,7 @@ mm.add("(min-width: 1024px)", () => {
                 trigger: section,
                 start: "top 80%",
                 end: "top 30%",
-
+                scrub: true,
                 toggleActions: "play none none reverse"
             }
         });
@@ -339,9 +358,9 @@ document.querySelector(".rope").addEventListener("mousemove", (e) => {
     const d = `M0,20 Q500,${controlY} 1000,20`;
     gsap.to(path, {
         attr: { d },
-          duration: 0.3,
-         ease: "power2.out" 
-        
+        duration: 0.3,
+        ease: "power2.out"
+
     });
 });
 
