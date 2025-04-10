@@ -177,3 +177,30 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(element);
     });
 });
+
+/* BOTON ARRIBA- CONTACT */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btnAbout = document.querySelector("#arriba");
+    const aboutMe = document.querySelector("#about-me");
+
+    btnAbout.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const aboutMeTop = aboutMe.offsetTop;
+        const aboutMeBottom = aboutMeTop + aboutMe.offsetHeight;
+
+        // Mostrar solo si estamos DENTRO de la sección #about-me
+        if (scrollY >= aboutMeTop && scrollY < aboutMeBottom) {
+            btnAbout.classList.add("show");
+        } else {
+            btnAbout.classList.remove("show");
+        }
+    });
+});

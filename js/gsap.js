@@ -275,7 +275,7 @@ gsap.utils.toArray(".web").forEach((element) => {
 
 let mm = gsap.matchMedia();
 
-mm.add("(min-width: 1024px)", () => {
+mm.add("(min-width: 768px)", () => {
     let sections = gsap.utils.toArray(".web");
     sections.forEach((section) => {
         gsap.from(section, {
@@ -371,3 +371,7 @@ document.querySelector(".rope").addEventListener("mouseleave", () => {
         ease: "elastic.out(1, 0.3)"
     });
 });
+
+
+
+
