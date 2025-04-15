@@ -431,6 +431,22 @@ body.dark-mode .footer-list a i:hover {
     color: var(--clr-title);
 }
 
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color:#ff6347/*  var(--clr-title) */; 
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  
 /* HERO */
 
 .hero {
@@ -506,7 +522,7 @@ body.dark-mode .footer-list a i:hover {
     padding-bottom: .3px;
     display: block;
     justify-content: center;
-    position: absolute; 
+    position: absolute;
 }
 
 .hello {
@@ -532,7 +548,6 @@ body.dark-mode .footer-list a i:hover {
     display: flex;
     flex-direction: column;
     width: 90vw;
-
     padding-top: 1rem;
     padding-bottom: 1rem;
     scroll-margin-top: .5rem;
@@ -562,7 +577,6 @@ body.dark-mode .footer-list a i:hover {
 
 .portfolio-p,
 .about-me-p {
-
     justify-content: center;
     text-align: start;
     color: var(--clr-details);
@@ -584,7 +598,7 @@ body.dark-mode .footer-list a i:hover {
     gap: 1rem;
     display: flex;
     flex-direction: column;
-
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .web-p {
@@ -623,7 +637,7 @@ body.dark-mode .footer-list a i:hover {
 }
 
 
-
+/* 
 .img-card img {
     width: 100%;
     height: 100%;
@@ -633,7 +647,7 @@ body.dark-mode .footer-list a i:hover {
 
 .img-wrapper video:hover {
     cursor: pointer;
-}
+} */
 
 .btn-web {
     background-color: transparent;
@@ -724,11 +738,11 @@ body.dark-mode .footer-list a i:hover {
 }
 
 .card3 {
-
-    border: 1px solid #223307
-        /* #ff5733 */
-    ;
+    border: 1px solid #223307;
+    
+    margin-bottom: 1rem;
 }
+
 
 .card3 button:hover {
     background-color:
@@ -810,7 +824,7 @@ ul.featureList li {
     flex-direction: column;
     padding-top: 1rem;
     scroll-margin-top: 1rem;
-
+    position: relative;
 }
 
 .resaltado {
@@ -839,6 +853,7 @@ ul.featureList li {
     cursor: pointer;
     transform: scale(1.1);
 }
+
 .fade-in {
     opacity: 0;
     transition: opacity 1s ease-out, transform 1s ease-out;
@@ -847,6 +862,7 @@ ul.featureList li {
 .fade-in.show {
     opacity: 1;
 }
+
 /* CONTACT */
 .email {
     /* color: var(--clr-text2); */
@@ -877,7 +893,7 @@ ul.featureList li {
     padding-bottom: 1rem;
     scroll-margin-top: .5rem;
     margin-bottom: 3rem;
-
+    position: relative;
 }
 
 .contact-title {
@@ -885,29 +901,32 @@ ul.featureList li {
 }
 
 
-#arriba{
+#arriba {
     background-color: var(--clr-title);
     padding: .2rem;
     border: none;
     border-radius: 5px;
     color: var(--clr-text2);
     font-size: 1.5rem;
-    right:25px;
+    right: 25px;
     bottom: 150px;
     position: fixed;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     pointer-events: none;
 }
-#arriba:hover{
+
+#arriba:hover {
     color: var(--clr-text);
     background-color: transparent;
     border: 1px solid var(--clr-title);
 }
-#arriba.show{
+
+#arriba.show {
     opacity: 1;
     pointer-events: auto;
 }
+
 /* FOOTER */
 .footer {
     width: 90vw;
@@ -915,7 +934,7 @@ ul.featureList li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-   /*  align-items: end; */
+    /*  align-items: end; */
     position: relative;
     padding-bottom: 1rem;
 }
@@ -940,7 +959,8 @@ ul.featureList li {
     color: var(--clr-title);
     transform: scale(1.1);
 }
-.copi{
+
+.copi {
     display: flex;
     justify-content: end;
     font-family: var(--ff-title);
@@ -950,9 +970,10 @@ ul.featureList li {
     align-items: end;
     cursor: pointer;
 }
-.copi p{
+
+.copi p {
     display: flex;
-   flex-direction: row;
+    flex-direction: row;
     align-self: end;
 }
 
@@ -992,15 +1013,16 @@ ul.featureList li {
         font-size: 3.1rem;
     }
 }
-@media (min-width: 768px)  and (max-width: 1199px)  {
+
+@media (min-width: 768px) and (max-width: 1199px) {
     .hero {
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding-top: 0;
         width: 90vw;
-        min-height: 80vh; 
+        min-height: 80vh;
         margin-top: 0;
-    } 
+    }
 
     .title-hero {
         font-size: 2.5rem;
@@ -1009,7 +1031,7 @@ ul.featureList li {
 
     .subtitle-hero {
         font-size: 1.3rem;
-       text-wrap: balance;
+        text-wrap: balance;
     }
 
     .title-portfolio,
@@ -1027,11 +1049,12 @@ ul.featureList li {
     .hello {
         grid-column: span 2;
         font-size: 3rem;
-        margin-top:7rem;
+        margin-top: 7rem;
         width: 100%;
         margin-left: -1.8rem;
     }
-.web{
+
+    .web {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
@@ -1073,44 +1096,46 @@ ul.featureList li {
         margin-top: 2rem;
         align-items: center;
     }
-.wrapp-certificados {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas:
-        "fe fe ds js"
-        "fe fe react wp";
-    gap: 1rem;
-    padding: 1rem 2rem;
+
+    .wrapp-certificados {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+            "fe fe ds js"
+            "fe fe react wp";
+        gap: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    .certificado {
+        width: 100%;
+        height: auto;
+    }
+
+    .fe {
+        grid-area: fe;
+    }
+
+    .ds {
+        grid-area: ds;
+    }
+
+    .js {
+        grid-area: js;
+    }
+
+    .react {
+        grid-area: react;
+
+    }
+
+    .wp {
+        grid-area: wp;
+    }
+
 }
 
-.certificado {
-    width: 100%;
-    height: auto;
-}
-
-.fe {
-    grid-area: fe;
-}
-
-.ds {
-    grid-area: ds;
-}
-
-.js {
-    grid-area: js;
-}
-
-.react {
-    grid-area: react;
-
-}
-
-.wp {
-    grid-area: wp;
-}
-
-}
 /* NAV DESKTOP */
 @media(min-width:1200px) {
 
@@ -1315,11 +1340,13 @@ ul.featureList li {
     .wp {
         grid-area: wp;
     }
-    #arriba{
-        right:25px;
-        bottom: 23px; 
-        font-size: 1.5rem;  
+
+    #arriba {
+        right: 25px;
+        bottom: 23px;
+        font-size: 1.5rem;
     }
+
     /* CONTACT */
     .email p {
         font-size: 1.3rem;

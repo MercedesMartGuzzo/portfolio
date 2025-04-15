@@ -187,16 +187,16 @@ const isDarkMode = document.body.classList.contains("dark-mode");
 const color = isDarkMode ? "#00ffee" : "tomato"; // poné los colores que quieras para cada modo
 
 gsap.fromTo(
-  ".hello h3",
-  { x: `-${textWidth}px`, color: isDarkMode ? "white" : "black" },
-  {
-    x: "100vw",
-    duration: 5,
-    color: color,
-    delay: 1,
-    repeat: -1,
-    ease: "linear",
-  }
+    ".hello h3",
+    { x: `-${textWidth}px`, color: isDarkMode ? "white" : "black" },
+    {
+        x: "100vw",
+        duration: 5,
+        color: color,
+        delay: 1,
+        repeat: -1,
+        ease: "linear",
+    }
 );
 
 
@@ -373,5 +373,26 @@ document.querySelector(".rope").addEventListener("mouseleave", () => {
 });
 
 
+const cursor = document.querySelector(".custom-cursor");
 
+window.addEventListener("mousemove", (e) => {
+    gsap.to(cursor, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.2,
+        ease: "power2.out"
+    });
+});
+
+const links = document.querySelectorAll("a");
+
+links.forEach(link => {
+    link.addEventListener("mouseenter", () => {
+        cursor.style.backgroundColor = "rgba(255, 0, 0, 0.5)"; 
+    });
+
+    link.addEventListener("mouseleave", () => {
+        cursor.style.backgroundColor = "#ff6347"; 
+    });
+});
 
