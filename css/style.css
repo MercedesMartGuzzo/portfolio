@@ -75,7 +75,7 @@ body {
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     min-height: 100dvh;
-
+ 
 }
 
 html {
@@ -431,22 +431,29 @@ body.dark-mode .footer-list a i:hover {
     color: var(--clr-title);
 }
 
-.custom-cursor {
+ .custom-cursor {
     position: fixed;
     top: 0;
     left: 0;
     width: 20px;
-    height: 20px;
-    background-color:#ff6347/*  var(--clr-title) */; 
+    height: 20px; 
+    font-size: 16px;
+    line-height: 1;
+    background-color:  #ff6347; 
     border-radius: 50%;
     pointer-events: none;
-    z-index: 0;
+ 
     transform: translate(-50%, -50%);
     transition: background-color 0.3s ease;
-  }
-  
-  
-  
+    display: unset;
+}  
+
+
+
+
+
+
+
 /* HERO */
 
 .hero {
@@ -461,7 +468,7 @@ body.dark-mode .footer-list a i:hover {
     position: relative;
     overflow: hidden;
     margin-bottom: 3rem;
-
+  
 }
 
 
@@ -494,7 +501,7 @@ body.dark-mode .footer-list a i:hover {
     font-family: var(--ff-text);
     font-size: 1rem;
     opacity: 1;
-
+z-index: -2;
 }
 
 
@@ -511,7 +518,6 @@ body.dark-mode .footer-list a i:hover {
     position: relative;
     min-height: 300px;
     overflow: visible;
-
 }
 
 .portada img {
@@ -523,6 +529,7 @@ body.dark-mode .footer-list a i:hover {
     display: block;
     justify-content: center;
     position: absolute;
+   
 }
 
 .hello {
@@ -590,7 +597,7 @@ body.dark-mode .footer-list a i:hover {
     overflow: hidden;
 }
 
-.web {
+ .web {
     border: 1px solid var(--clr-text2);
     padding: 1rem;
     border-radius: 5px;
@@ -599,7 +606,7 @@ body.dark-mode .footer-list a i:hover {
     display: flex;
     flex-direction: column;
     box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);
-}
+} 
 
 .web-p {
     margin-top: 1rem;
@@ -615,8 +622,10 @@ body.dark-mode .footer-list a i:hover {
 
 .web img {
     border-radius: 5px;
+    isolation: isolate;
+   
 }
-
+ 
 .web-wrap {
     margin-top: 1.5rem;
     width: 90vw;
@@ -628,7 +637,8 @@ body.dark-mode .footer-list a i:hover {
     overflow: hidden;
     gap: 1rem;
 
-}
+} 
+
 
 .web-title {
     color: var(--clr-text2);
@@ -739,7 +749,7 @@ body.dark-mode .footer-list a i:hover {
 
 .card3 {
     border: 1px solid #223307;
-    
+
     margin-bottom: 1rem;
 }
 
@@ -937,6 +947,7 @@ ul.featureList li {
     /*  align-items: end; */
     position: relative;
     padding-bottom: 1rem;
+   
 }
 
 .footer-list {
@@ -945,18 +956,18 @@ ul.featureList li {
     gap: 2rem;
     font-size: 2rem;
     padding-top: 2rem;
-
 }
 
 .footer-list a i {
-    color: var(--clr-details);
+    color: var(--clr-title);
     transition: color .3s, transform .3s ease-in-out;
     font-size: 2rem;
     display: flex;
+ 
 }
 
 .footer-list a i:hover {
-    color: var(--clr-title);
+    color: var(--clr-details);
     transform: scale(1.1);
 }
 
@@ -1015,6 +1026,26 @@ ul.featureList li {
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
+    
+.custom-cursor {
+   /*  position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px; 
+    font-size: 16px;
+    line-height: 1;
+    background-color: #ff6347
+  
+    ;
+    border-radius: 50%;
+    pointer-events: none;
+    
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease; */
+    display:inherit;
+   /*   z-index: -1;  */
+}
     .hero {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1340,7 +1371,9 @@ ul.featureList li {
     .wp {
         grid-area: wp;
     }
-
+    .certificado.fe img:hover { 
+        transform: scale(1.05);
+    }
     #arriba {
         right: 25px;
         bottom: 23px;
@@ -1356,15 +1389,16 @@ ul.featureList li {
     /* FOOTER */
     .footer-list {
         gap: 3rem;
-
+     
     }
 
     .footer-list a i {
         font-size: 2.5rem;
     }
-
+   
     .footer {
         padding-bottom: 1rem;
+       
     }
 }
 
