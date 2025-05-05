@@ -25,7 +25,7 @@ gsap.to(".title-hero", {
 
 /* SUBTITLE-HERO */
 
-const text = new SplitType('.subtitle-hero',  { types: "words, chars" });
+const text = new SplitType('.subtitle-hero', { types: "words, chars" });
 
 text.chars.forEach((char, index) => {
     let charsTl = gsap.timeline({
@@ -45,12 +45,12 @@ text.chars.forEach((char, index) => {
         delay: index * 0.01
     });
 
-  /*   charsTl.from(char, {
-        color: `rgb(${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)})`,
-        duration: 1,
-    }, "-=.25"); */
+    /*   charsTl.from(char, {
+          color: `rgb(${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)})`,
+          duration: 1,
+      }, "-=.25"); */
 
-   /*  let charOriginalColor = window.getComputedStyle(char).color; */
+    /*  let charOriginalColor = window.getComputedStyle(char).color; */
 
     function charsHover() {
         gsap.timeline()
@@ -61,7 +61,7 @@ text.chars.forEach((char, index) => {
                 scale: gsap.utils.random(0.5, 1.5),
                 duration: .5,
                 ease: "back.out",
-             /*    color: `rgb(${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)})`, */
+                /*    color: `rgb(${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)})`, */
                 onStart: () => char.removeEventListener("mouseenter", charsHover),
             })
             .to(char, {
@@ -69,7 +69,7 @@ text.chars.forEach((char, index) => {
                 x: 0,
                 rotate: 0,
                 scale: 1,
-               /*  color: charOriginalColor, */
+                /*  color: charOriginalColor, */
                 delay: 1,
                 duration: .5,
                 ease: "back.out",
@@ -374,40 +374,42 @@ document.querySelector(".rope").addEventListener("mouseleave", () => {
 /* Cursor */
 const cursor = document.querySelector(".custom-cursor");
 
-// Movimiento + color dinámico según elemento debajo
-window.addEventListener("mousemove", (e) => {
-    // Mover el cursor con GSAP
-    gsap.to(cursor, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.2,
-        ease: "power2.out"
-    });
+if (window.innerWidth >= 768) {
+    // Movimiento + color dinámico según elemento debajo
+    window.addEventListener("mousemove", (e) => {
+        // Mover el cursor con GSAP
+        gsap.to(cursor, {
+            x: e.clientX,
+            y: e.clientY,
+            duration: 0.2,
+            ease: "power2.out"
+        });
 
-    // Detectar elemento debajo del cursor
-    const elementBelow = document.elementFromPoint(e.clientX, e.clientY);
+        // Detectar elemento debajo del cursor
+        const elementBelow = document.elementFromPoint(e.clientX, e.clientY);
 
-    if (elementBelow) {
-        const style = getComputedStyle(elementBelow);
-        const bgColor = style.backgroundColor;
-        const textColor = style.color;
+        if (elementBelow) {
+            const style = getComputedStyle(elementBelow);
+            const bgColor = style.backgroundColor;
+            const textColor = style.color;
 
-        // Si el fondo es transparente, usamos el color del texto
-           const newColor = bgColor !== 'rgba(0, 0, 0, 0)' && bgColor !== 'transparent' ? bgColor : textColor; 
-      
-        // Solo cambiar el color si no está en hover de un link (para no sobreescribir el emoji)
-        if (!cursor.classList.contains("hovering-link")) {
-            gsap.to(cursor, {
-                backgroundColor: newColor,
-                duration: 0.2
-            });
+            // Si el fondo es transparente, usamos el color del texto
+            const newColor = bgColor !== 'rgba(0, 0, 0, 0)' && bgColor !== 'transparent' ? bgColor : textColor;
 
-            cursor.classList.add("transparent"); // Añadimos el efecto de transparencia y desenfoque
+            // Solo cambiar el color si no está en hover de un link (para no sobreescribir el emoji)
+            if (!cursor.classList.contains("hovering-link")) {
+                gsap.to(cursor, {
+                    backgroundColor: newColor,
+                    duration: 0.2
+                });
+
+                cursor.classList.add("transparent"); // Añadimos el efecto de transparencia y desenfoque
+            }
+        } else {
+            cursor.classList.remove("transparent"); // Cuando el cursor no está sobre un elemento, quitamos el efecto
         }
-    } else {
-        cursor.classList.remove("transparent"); // Cuando el cursor no está sobre un elemento, quitamos el efecto
-    }
-});
+    });
+}
 
 // Manejo de links (emoji + escala)
 const links = document.querySelectorAll("a, .rope, #arriba, .copi, p, h3, h2, h1, .hello");
