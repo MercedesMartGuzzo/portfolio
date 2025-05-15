@@ -92,7 +92,7 @@ gsap.from(".hero-p", {
 
 
 /* PORTADA-IMG */
-gsap.fromTo(".portada img",
+/* gsap.fromTo(".portada img",
     {
         y: 50,
         opacity: 0,
@@ -100,20 +100,21 @@ gsap.fromTo(".portada img",
     },
     {
         y: 0, opacity: 1,
-        backgroundColor:/*  "#005cef */"white",
+        backgroundColor:"white",
         duration: 1.5,
         ease: "power2.out",
         delay: 0.5
     }
 );
-
+ */
 /* HOVER PORTADA */
 
-document.querySelector(".portada img").addEventListener("mouseenter", function () {
+/* document.querySelector(".portada img").addEventListener("mouseenter", function () {
     gsap.to(this,
         {
-            rotation: 10,
-            backgroundColor: "black",/* "#ff1f25" *//* "#ff1f25" */
+
+
+            backgroundColor: "black",
             duration: 0.5
         });
 });
@@ -121,12 +122,12 @@ document.querySelector(".portada img").addEventListener("mouseenter", function (
 document.querySelector(".portada img").addEventListener("mouseleave", function () {
     gsap.to(this,
         {
-            rotation: 0,
-            backgroundColor: "", /* "#ffdd18" *//* "#005cef", */
+
+            backgroundColor: "", 
             duration: 0.5
         });
 
-});
+}); */
 
 
 
@@ -372,69 +373,43 @@ document.querySelector(".rope").addEventListener("mouseleave", () => {
 });
 
 /* Cursor */
-const cursor = document.querySelector(".custom-cursor");
+  const cursor = document.querySelector(".custom-cursor");
 
 if (window.innerWidth >= 768) {
     // Movimiento + color dinámico según elemento debajo
     window.addEventListener("mousemove", (e) => {
-        // Mover el cursor con GSAP
         gsap.to(cursor, {
             x: e.clientX,
             y: e.clientY,
             duration: 0.2,
             ease: "power2.out"
         });
-
-        // Detectar elemento debajo del cursor
-        const elementBelow = document.elementFromPoint(e.clientX, e.clientY);
-
-        if (elementBelow) {
-            const style = getComputedStyle(elementBelow);
-            const bgColor = style.backgroundColor;
-            const textColor = style.color;
-
-            // Si el fondo es transparente, usamos el color del texto
-            const newColor = bgColor !== 'rgba(0, 0, 0, 0)' && bgColor !== 'transparent' ? bgColor : textColor;
-
-            // Solo cambiar el color si no está en hover de un link (para no sobreescribir el emoji)
-            if (!cursor.classList.contains("hovering-link")) {
-                gsap.to(cursor, {
-                    backgroundColor: newColor,
-                    duration: 0.2
-                });
-
-                cursor.classList.add("transparent"); // Añadimos el efecto de transparencia y desenfoque
-            }
-        } else {
-            cursor.classList.remove("transparent"); // Cuando el cursor no está sobre un elemento, quitamos el efecto
-        }
     });
-}
 
-// Manejo de links (emoji + escala)
-const links = document.querySelectorAll("a, .rope, #arriba, .copi, p, h3, h2, h1, .hello");
+    // Manejo de links (emoji + escala)
+    const links = document.querySelectorAll("a, #arriba, .copi, p,.web-title, h1,.hello");
 
-links.forEach(link => {
-    link.addEventListener("mouseenter", () => {
-        cursor.classList.add("hovering-link");
+    links.forEach(link => {
+        link.addEventListener("mouseenter", () => {
+            cursor.classList.add("hovering-link");
 
-        gsap.to(cursor, {
-            scale: 0.5,
-            duration: 0.2,
-            ease: "power2.out"
+            gsap.to(cursor, {
+                scale: 3,
+                duration: 0.2,
+                ease: "power2.out"
+            });
+        });
+
+        link.addEventListener("mouseleave", () => {
+            cursor.classList.remove("hovering-link");
+
+            gsap.to(cursor, {
+                scale: 1,
+                
+                duration: 0.2,
+                ease: "power2.out"
+            });
         });
     });
-
-    link.addEventListener("mouseleave", () => {
-        cursor.classList.remove("hovering-link");
-
-        gsap.to(cursor, {
-            scale: 1,
-            backgroundColor: "#ff6347", // Restauramos color
-            duration: 0.2,
-            ease: "power2.out"
-        });
-    });
-});
-
-
+} 
+ 
