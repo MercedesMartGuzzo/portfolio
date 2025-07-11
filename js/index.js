@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/* toggle-btn */
+/* TOGGLE-BTN-CARDS */
 document.querySelectorAll(".toggleBtn").forEach(button => {
     button.addEventListener("click", function () {
         let container = this.closest("div"); // Encuentra el div contenedor más cercano
@@ -118,7 +118,7 @@ document.querySelectorAll(".toggleBtn").forEach(button => {
 });
 
 
-
+/* MODAL CERTIFICADOS */
 document.querySelectorAll(".certificado img").forEach(certificado => {
     certificado.addEventListener("click", function () {
         // Create modal container

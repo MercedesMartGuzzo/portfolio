@@ -24,8 +24,14 @@ gsap.to(".title-hero", {
 
 
 /* SUBTITLE-HERO */
-
-const text = new SplitType('.subtitle-hero', { types: "words, chars" });
+gsap.from(".subtitle-hero", {
+    y: -50,
+    opacity: 0,
+    delay: .5,
+    duration: 1,
+    ease: "bounce.out"
+});
+/* const text = new SplitType('.subtitle-hero', { types: "words, chars" });
 
 text.chars.forEach((char, index) => {
     let charsTl = gsap.timeline({
@@ -45,13 +51,7 @@ text.chars.forEach((char, index) => {
         delay: index * 0.01
     });
 
-    /*   charsTl.from(char, {
-          color: `rgb(${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)})`,
-          duration: 1,
-      }, "-=.25"); */
-
-    /*  let charOriginalColor = window.getComputedStyle(char).color; */
-
+ 
     function charsHover() {
         gsap.timeline()
             .to(char, {
@@ -61,7 +61,6 @@ text.chars.forEach((char, index) => {
                 scale: gsap.utils.random(0.5, 1.5),
                 duration: .5,
                 ease: "back.out",
-                /*    color: `rgb(${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)}, ${gsap.utils.random(0, 255)})`, */
                 onStart: () => char.removeEventListener("mouseenter", charsHover),
             })
             .to(char, {
@@ -69,7 +68,7 @@ text.chars.forEach((char, index) => {
                 x: 0,
                 rotate: 0,
                 scale: 1,
-                /*  color: charOriginalColor, */
+                
                 delay: 1,
                 duration: .5,
                 ease: "back.out",
@@ -79,7 +78,7 @@ text.chars.forEach((char, index) => {
 
     char.addEventListener("mouseenter", charsHover);
 });
-
+ */
 /* HERO-P */
 
 gsap.from(".hero-p", {
@@ -92,7 +91,7 @@ gsap.from(".hero-p", {
 
 
 /* PORTADA-IMG */
-/* gsap.fromTo(".portada img",
+gsap.fromTo(".portada img",
     {
         y: 50,
         opacity: 0,
@@ -100,14 +99,16 @@ gsap.from(".hero-p", {
     },
     {
         y: 0, opacity: 1,
-        backgroundColor:"white",
+        backgroundColor: "white",
         duration: 1.5,
         ease: "power2.out",
         delay: 0.5
     }
 );
- */
+
 /* HOVER PORTADA */
+
+
 
 /* document.querySelector(".portada img").addEventListener("mouseenter", function () {
     gsap.to(this,
@@ -127,8 +128,8 @@ document.querySelector(".portada img").addEventListener("mouseleave", function (
             duration: 0.5
         });
 
-}); */
-
+});
+ */
 
 
 
@@ -224,7 +225,7 @@ gsap.fromTo(".title-portfolio",
             trigger: ".portfolio",
             start: "top 80%",
             end: "top 50%",
-            scrub: true,
+            scrub: 2,
         }
     }
 );
@@ -287,7 +288,7 @@ mm.add("(min-width: 768px)", () => {
                 trigger: section,
                 start: "top 80%",
                 end: "top 30%",
-                scrub: true,
+                scrub: 2,
                 toggleActions: "play none none reverse"
             }
         });
@@ -327,7 +328,7 @@ gsap.from(".about-me-title",
             trigger: ".about-me-title",
             start: "top 80%",
             end: "bottom 20%",
-            scrub: true
+            scrub: 2
         }
     }
 );
@@ -341,7 +342,7 @@ gsap.from(".contact-title",
             trigger: ".contact-title",
             start: "top 90%",
             end: "bottom 85%",
-            scrub: true,
+            scrub: 2,
         }
     }
 )
@@ -373,10 +374,10 @@ document.querySelector(".rope").addEventListener("mouseleave", () => {
 });
 
 /* Cursor */
-  const cursor = document.querySelector(".custom-cursor");
+const cursor = document.querySelector(".custom-cursor");
 
 if (window.innerWidth >= 768) {
-    // Movimiento + color dinámico según elemento debajo
+ 
     window.addEventListener("mousemove", (e) => {
         gsap.to(cursor, {
             x: e.clientX,
@@ -386,15 +387,15 @@ if (window.innerWidth >= 768) {
         });
     });
 
-    // Manejo de links (emoji + escala)
-    const links = document.querySelectorAll("a, #arriba, .copi, p,.web-title, h1,.hello");
+   
+    const links = document.querySelectorAll(".footer-list li a i,#arriba, .copi, p,.web-title, h1,.hello,.btn-eng, #abrir,.cerrar-menu");
 
     links.forEach(link => {
         link.addEventListener("mouseenter", () => {
             cursor.classList.add("hovering-link");
 
             gsap.to(cursor, {
-                scale: 3,
+                scale: 10,
                 duration: 0.2,
                 ease: "power2.out"
             });
@@ -405,11 +406,11 @@ if (window.innerWidth >= 768) {
 
             gsap.to(cursor, {
                 scale: 1,
-                
+
                 duration: 0.2,
                 ease: "power2.out"
             });
         });
     });
-} 
- 
+}
+
