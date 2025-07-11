@@ -422,7 +422,9 @@ body.dark-mode .web .featureList,
 body.dark-mode .web h4,
 body.dark-mode .web button,
 body.dark-mode .footer-list a i,
-body.dark-mode .hello h3,
+body.dark-mode .hello h3, body.dark-mode .resaltado, body.dark-mode .email a {
+    color: var(--clr-text2);
+}
 body.dark-mode .email a:hover {
     color: var(--clr-text2);
 }
@@ -566,7 +568,7 @@ body.dark-mode .abrir-menu:hover {
     justify-content: start;
     position: absolute;
     max-width: 100%;
-   z-index: 10000
+   
 }
 
 

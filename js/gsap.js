@@ -377,7 +377,7 @@ document.querySelector(".rope").addEventListener("mouseleave", () => {
 const cursor = document.querySelector(".custom-cursor");
 
 if (window.innerWidth >= 768) {
- 
+
     window.addEventListener("mousemove", (e) => {
         gsap.to(cursor, {
             x: e.clientX,
@@ -387,8 +387,8 @@ if (window.innerWidth >= 768) {
         });
     });
 
-   
-    const links = document.querySelectorAll(".footer-list li a i,#arriba, .copi, p,.web-title, h1,.hello,.btn-eng, #abrir,.cerrar-menu");
+
+    const links = document.querySelectorAll(".footer-list li a i,#arriba, .copi, p, h1,.hello,.btn-eng, #abrir,.cerrar-menu,.subtitle-hero, .title-portfolio, .about-me-title, .contact-title, .web h4, .web button, .web p, .web a, .web i, .hello h3, .resaltado, .email a");
 
     links.forEach(link => {
         link.addEventListener("mouseenter", () => {
