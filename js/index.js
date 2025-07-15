@@ -38,7 +38,7 @@ cerrar.addEventListener("click", () => {
         abrir.style.display = "block";
     }, 1000);
 });
-/* Cada vez q hago click en un iten la nav cierra */
+/* Cada vez q hago click en un item la nav cierra */
 menuItems.forEach(item => {
     item.addEventListener("click", () => {
         nav.classList.remove("visible");
@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", () => {
         let currentScrollY = window.scrollY;
-
         if (currentScrollY > lastScrollY && currentScrollY >= document.querySelector(".title-hero").offsetTop) {
             gsap.to(header, {
                 y: "-100%",
@@ -93,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 ease: "power3.out"
             });
         }
-
         lastScrollY = currentScrollY;
     });
 });
@@ -102,16 +100,14 @@ document.addEventListener("DOMContentLoaded", function () {
 /* TOGGLE-BTN-CARDS */
 document.querySelectorAll(".toggleBtn").forEach(button => {
     button.addEventListener("click", function () {
-        let container = this.closest("div"); // Encuentra el div contenedor más cercano
-        let title = container.querySelector(".featureTitle"); // Encuentra el título dentro del div
-        let list = container.querySelector(".featureList"); // Encuentra la lista dentro del div
-        let icon = this.querySelector("i"); // Encuentra el icono dentro del botón
+        let container = this.closest("div"); 
+        let title = container.querySelector(".featureTitle"); 
+        let list = container.querySelector(".featureList"); 
+        let icon = this.querySelector("i"); 
 
-        // Alternar visibilidad
         title.classList.toggle("hidden");
         list.classList.toggle("hidden");
 
-        // Alternar icono de flecha
         icon.classList.toggle("bi-arrow-down");
         icon.classList.toggle("bi-arrow-up");
     });
@@ -121,7 +117,7 @@ document.querySelectorAll(".toggleBtn").forEach(button => {
 /* MODAL CERTIFICADOS */
 document.querySelectorAll(".certificado img").forEach(certificado => {
     certificado.addEventListener("click", function () {
-        // Create modal container
+
         const modal = document.createElement("div");
         modal.style.position = "fixed";
         modal.style.top = "0";
@@ -134,20 +130,16 @@ document.querySelectorAll(".certificado img").forEach(certificado => {
         modal.style.alignItems = "center";
         modal.style.zIndex = "10000";
 
-        // Create enlarged image
         const enlargedImg = document.createElement("img");
         enlargedImg.src = this.src;
         enlargedImg.style.maxWidth = "90%";
         enlargedImg.style.maxHeight = "90%";
         enlargedImg.style.borderRadius = "10px";
 
-        // Append image to modal
         modal.appendChild(enlargedImg);
 
-        // Append modal to body
         document.body.appendChild(modal);
 
-        // Close modal on click
         modal.addEventListener("click", () => {
             document.body.removeChild(modal);
         });
@@ -158,10 +150,9 @@ document.querySelectorAll(".certificado img").forEach(certificado => {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Selecciona todos los elementos que deseas animar
     const elements = document.querySelectorAll('.fade-in');
 
-    // Crear el observer
+  
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -169,10 +160,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }, {
-        threshold: 0.05// 10% del elemento visible
+        threshold: 0.05
     });
 
-    // Observar todos los elementos seleccionados
     elements.forEach(element => {
         observer.observe(element);
     });
@@ -196,7 +186,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const aboutMeTop = aboutMe.offsetTop;
         const aboutMeBottom = aboutMeTop + aboutMe.offsetHeight;
 
-        // Mostrar solo si estamos DENTRO de la sección #about-me
         if (scrollY >= aboutMeTop && scrollY < aboutMeBottom) {
             btnAbout.classList.add("show");
         } else {

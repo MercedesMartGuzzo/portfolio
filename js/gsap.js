@@ -31,54 +31,8 @@ gsap.from(".subtitle-hero", {
     duration: 1,
     ease: "bounce.out"
 });
-/* const text = new SplitType('.subtitle-hero', { types: "words, chars" });
 
-text.chars.forEach((char, index) => {
-    let charsTl = gsap.timeline({
-        delay: 0.5,
-        scrub: false,
-        toggleActions: "play none none none"
-    });
 
-    charsTl.from(char, {
-        y: gsap.utils.random(-100, 100),
-        x: gsap.utils.random(-200, 200),
-        rotate: gsap.utils.random(-300, 300),
-        scale: gsap.utils.random(0, 2),
-        opacity: 0,
-        duration: 1,
-        ease: "back.out",
-        delay: index * 0.01
-    });
-
- 
-    function charsHover() {
-        gsap.timeline()
-            .to(char, {
-                y: gsap.utils.random(-30, 30),
-                x: gsap.utils.random(-30, 30),
-                rotate: gsap.utils.random(-50, 50),
-                scale: gsap.utils.random(0.5, 1.5),
-                duration: .5,
-                ease: "back.out",
-                onStart: () => char.removeEventListener("mouseenter", charsHover),
-            })
-            .to(char, {
-                y: 0,
-                x: 0,
-                rotate: 0,
-                scale: 1,
-                
-                delay: 1,
-                duration: .5,
-                ease: "back.out",
-                onComplete: () => setTimeout(() => char.addEventListener("mouseenter", charsHover), 100),
-            });
-    }
-
-    char.addEventListener("mouseenter", charsHover);
-});
- */
 /* HERO-P */
 
 gsap.from(".hero-p", {
@@ -90,118 +44,64 @@ gsap.from(".hero-p", {
 })
 
 
-/* PORTADA-IMG */
-gsap.fromTo(".portada img",
-    {
-        y: 50,
-        opacity: 0,
-        backgroundColor: "#005cef",
-    },
-    {
-        y: 0, opacity: 1,
-        backgroundColor: "white",
-        duration: 1.5,
-        ease: "power2.out",
-        delay: 0.5
+
+/* Portada */
+gsap.registerPlugin(ScrollTrigger);
+gsap.from(".portada", {
+    y: 5,
+    /* opacity: 0,  */
+    duration: 1.5,
+    ease: "power2.out",
+    delay: 0.5,
+    scrollTrigger: {
+        trigger: ".hero",
+        start: "top 10%",
+        end: "top 20%",
+        toggleActions: "play none reverse none",
+        scrub: 2
     }
+
+});
+/* PORTADA-IMG */
+gsap.from(".portada img",
+    {
+        y: 10,
+        duration: 2,
+        ease: "power2.out",
+        opacity: 0,
+        delay: .3
+    },
+
 );
-
-/* HOVER PORTADA */
-
-
-
-/* document.querySelector(".portada img").addEventListener("mouseenter", function () {
-    gsap.to(this,
-        {
-
-
-            backgroundColor: "black",
-            duration: 0.5
-        });
-});
-
-document.querySelector(".portada img").addEventListener("mouseleave", function () {
-    gsap.to(this,
-        {
-
-            backgroundColor: "", 
-            duration: 0.5
-        });
-
-});
- */
-
-
-
 
 /* HELLO */
 
 
-/* const text1 = new SplitType(".hello h3", { types: "words, chars" });
+const text1 = new SplitType(".hello h3", { types: "words, chars" });
 
 gsap.fromTo(
     text1.chars,
     {
         opacity: 0,
-        y: 50,
-        color: "black"
+        x: 50,
+        color: "black",
     },
     {
         opacity: 1,
-        y: 0,
+        x: 0,
         color: "#ff5733",
         stagger: 0.05,
         duration: 1,
-        ease: "power2.out",
+        ease: "bounce.in",
         scrollTrigger: {
             trigger: ".hello",
             start: "top 80%",
             end: "top 30%",
             toggleActions: "play none reverse none",
-            scrub: true
+            scrub: 3
         }
     }
-); */
-
-
-/* const hello = document.querySelector(".hello h3");
-const textWidth = hello.offsetWidth;
-
-gsap.fromTo(
-    ".hello h3",
-    { x: `-${textWidth}px`, color: "black" },
-    {
-        x: "100vw",
-        duration: 5,
-        color: "#ff5733",
-        delay: 1,
-        repeat: -1,
-        ease: "linear",
-    }
-); */
-const hello = document.querySelector(".hello h3");
-const textWidth = hello.offsetWidth;
-
-// Detectar si el body tiene la clase dark-mode
-const isDarkMode = document.body.classList.contains("dark-mode");
-
-// Elegir el color según el modo
-const color = isDarkMode ? "#00ffee" : "tomato"; // poné los colores que quieras para cada modo
-
-gsap.fromTo(
-    ".hello h3",
-    { x: `-${textWidth}px`, color: isDarkMode ? "white" : "black" },
-    {
-        x: "100vw",
-        duration: 5,
-        color: color,
-        delay: 1,
-        repeat: -1,
-        ease: "linear",
-    }
 );
-
-
 
 //PORTFOLIO//
 
@@ -263,7 +163,7 @@ gsap.utils.toArray(".web").forEach((element) => {
             trigger: element,
             start: "top 80%",
             end: "bottom 65%",
-            scrub: true,
+            scrub: 2,
 
             toggleActions: "play none none reverse"
         }
