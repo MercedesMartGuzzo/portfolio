@@ -1,0 +1,58 @@
+{
+    "nav": {
+        "portfolio": "Portfolio",
+        "aboutMe": "About Me",
+        "contact": "Contact"
+    },
+    "hero": {
+        "subtitle": "Front-End Developer",
+        "paragraph": "From Buenos Aires, Argentina, I design and develop interactive and functional websites tailored to the needs of each project. My focus is on simplicity, usability, and intuitive design, with a constant commitment to learning new technologies and improving my skills."
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "intro": "In this section, I invite you to explore a selection of web projects I’ve created, designed to offer an intuitive and visually engaging experience. Each of these works reflects my passion for web development and my focus on building functional, customized solutions for every client.",
+        "project1_title": "Cristian Basto",
+        "project1_desc": "I developed the official website of Argentine double bassist, arranger, and composer Cristian Basto, specialized in tango and Argentine music.",
+        "see_more": "See more",
+        "features_title": "Main features",
+        "feature1": "* Responsive design that adapts to various devices.",
+        "feature2": "* Dark mode for improved viewing in different environments.",
+        "feature3": "* Multilingual support (Spanish/English) with dynamic language detection and switching.",
+        "feature4": "* Organized sections for biography, music, sheet music, discography, and videos.",
+        "feature5": "* Subtle visual effects that enhance user experience.",
+        "feature6": "* Load optimization for smooth performance.",
+        "tech_title": "Technologies used",
+        "project2_title": "Natalia Bril",
+        "project2_desc": "I developed the official website for singer and teacher Natalia Bril, where she presents her music, biography, projects, classes, and courses.",
+        "project2_feature1": "* Responsive design adapted to various devices.",
+        "project2_feature2": "* Multilingual (Spanish/English) with automatic detection and manual switching.",
+        "project2_feature3": "* Organized sections for biography, music, discography, classes, courses, and contact.",
+        "project2_feature4": "* Subtle visual effects that enhance navigation.",
+        "project2_feature5": "* Load optimization for smooth and accessible performance.",
+        "project3_title": "La Tienda de Francini",
+        "project3_desc": "I developed the fake e-commerce website for La Tienda de Francini, an online store where users can explore and purchase products in an intuitive and secure way.",
+        "project3_feature1": "* Responsive design that adapts to various devices.",
+        "project3_feature2": "* Multilingual (Spanish/English) with dynamic language detection and switching.",
+        "project3_feature3": "* Organized sections for biography, music, sheet music, discography, and videos.",
+        "project3_feature4": "* Subtle visual effects that improve user experience.",
+        "project3_feature5": "* Load optimization for smooth performance."
+    },
+    "about": {
+        "title": "About Me",
+        "desc_1": "I'm Mercedes Martinez Guzzo, a professional musician and Frontend Developer. I discovered in web development a new passion that combines creativity and technology. I studied at Coderhouse, where I earned the certificate of",
+        "highlight_frontend": "Frontend Developer",
+        "desc_2": "completing the courses in",
+        "highlight_web": "Web Development",
+        "highlight_js": "JavaScript",
+        "desc_3": "and",
+        "highlight_react": "React.js",
+        "desc_4": "as well as a course in",
+        "highlight_wp": "WordPress",
+        "desc_5": "I'm just starting in the development world and I'm eager to keep growing, learning, and contributing to challenging projects. I'm excited about working in teams, sharing knowledge, and continuing my professional growth."
+    },
+    "contact": {
+        "title": "Contact",
+        "text": "To contact me, write to my email:"
+    }
+
+}

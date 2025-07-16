@@ -100,10 +100,10 @@ document.addEventListener("DOMContentLoaded", function () {
 /* TOGGLE-BTN-CARDS */
 document.querySelectorAll(".toggleBtn").forEach(button => {
     button.addEventListener("click", function () {
-        let container = this.closest("div"); 
-        let title = container.querySelector(".featureTitle"); 
-        let list = container.querySelector(".featureList"); 
-        let icon = this.querySelector("i"); 
+        let container = this.closest("div");
+        let title = container.querySelector(".featureTitle");
+        let list = container.querySelector(".featureList");
+        let icon = this.querySelector("i");
 
         title.classList.toggle("hidden");
         list.classList.toggle("hidden");
@@ -152,7 +152,7 @@ document.querySelectorAll(".certificado img").forEach(certificado => {
 document.addEventListener('DOMContentLoaded', function () {
     const elements = document.querySelectorAll('.fade-in');
 
-  
+
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -193,3 +193,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+/* CAMBIAR IDIOMA */
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    cambiarIdioma(currentLang);
+});
+
+document.getElementById("btn-translate").addEventListener("click", () => {
+    currentLang = currentLang === "es" ? "en" : "es";
+    cambiarIdioma(currentLang);
+});
+
+

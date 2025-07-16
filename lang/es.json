@@ -1,0 +1,57 @@
+{
+    "nav": {
+        "portfolio": "Portfolio",
+        "aboutMe": "Sobre mí",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "subtitle": "Desarrolladora Front-End",
+        "paragraph": "Desde Buenos Aires, Argentina, me dedico a diseñar y desarrollar sitios web interactivos y funcionales que se adaptan a las necesidades de cada proyecto. Mi enfoque está en la simplicidad, la usabilidad y el diseño intuitivo, con un compromiso constante por aprender nuevas tecnologías y mejorar mis habilidades."
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "intro": "En esta sección, te invito a explorar una selección de proyectos web que he creado, diseñados para ofrecer una experiencia intuitiva y visualmente atractiva. Cada uno de estos trabajos refleja mi pasión por el desarrollo web y mi enfoque en crear soluciones funcionales y personalizadas para cada cliente.",
+        "project1_title": "Cristian Basto",
+        "project1_desc": "Desarrollé el sitio web oficial del contrabajista, arreglador y compositor argentino Cristian Basto, especializado en tango y música argentina.",
+        "see_more": "Ver más",
+        "features_title": "Características principales",
+        "feature1": "* Diseño responsivo que se adapta a distintos dispositivos.",
+        "feature2": "* Modo oscuro (Dark Mode) para una mejor experiencia visual en diferentes entornos.",
+        "feature3": "* Multilenguaje (Español/Inglés) con detección y cambio dinámico de idioma.",
+        "feature4": "* Secciones organizadas para biografía, música, partituras, discografía y videos.",
+        "feature5": "* Interactividad con efectos visuales sutiles que mejoran la experiencia del usuario.",
+        "feature6": "* Optimización de carga para un rendimiento fluido.",
+        "tech_title": "Técnicas utilizadas",
+        "project2_title": "Natalia Bril",
+        "project2_desc": "Desarrollé el sitio web oficial de la cantante y docente Natalia Bril, donde presenta su música, biografía, proyectos, clases y cursos.",
+        "project2_feature1": "* Diseño responsivo, adaptado a distintos dispositivos.",
+        "project2_feature2": "* Multilenguaje (Español/Inglés) con detección automática y cambio manual de idioma",
+        "project2_feature3": "* Secciones organizadas para biografía, música, discografía, clases, cursos y contacto.",
+        "project2_feature4": "* Interactividad con efectos visuales sutiles que enriquecen la navegación.",
+        "project2_feature5": "* Optimización de carga para un rendimiento fluido y accesible.",
+        "project3_title": "La Tienda de Francini",
+        "project3_desc": "Desarrollé el sitio web e-commerce fake de La Tienda de Francini, una tienda online donde los usuarios pueden explorar y comprar productos de forma intuitiva y segura.",
+        "project3_feature1": "* Diseño responsivo que se adapta a distintos dispositivos.",
+        "project3_feature2": "* Multilenguaje (Español/Inglés) con detección y cambio dinámico de idioma.",
+        "project3_feature3": "* Secciones organizadas para biografía, música, partituras, discografía y videos.",
+        "project3_feature4": "* Interactividad con efectos visuales sutiles que mejoran la experiencia del usuario.",
+        "project3_feature5": "* Optimización de carga para un rendimiento fluido."
+    },
+    "about": {
+        "title": "Sobre mí",
+        "desc_1": "Soy Mercedes Martinez Guzzo, música profesional y desarrolladora Frontend. Descubrí en el desarrollo web una nueva pasión que combina creatividad y tecnología. Me formé en Coderhouse, donde obtuve el certificado de",
+        "highlight_frontend": "Desarrolladora Frontend",
+        "desc_2": "completando los cursos de",
+        "highlight_web": "Desarrollo Web",
+        "highlight_js": "JavaScript",
+        "desc_3": "y",
+        "highlight_react": "React.js",
+        "desc_4": "además de un curso de",
+        "highlight_wp": "WordPress",
+        "desc_5": "Estoy comenzando en el mundo del desarrollo y tengo muchas ganas de seguir creciendo, aprendiendo y aportando en proyectos desafiantes. Me entusiasma la idea de trabajar en equipo, compartir conocimientos y continuar desarrollándome profesionalmente."
+    },
+    "contact": {
+        "title": "Contacto",
+        "text": "Para contactarme escribíme a mi correo :"
+    }
+}

@@ -55,8 +55,8 @@ gsap.from(".portada", {
     delay: 0.5,
     scrollTrigger: {
         trigger: ".hero",
-        start: "top 10%",
-        end: "top 20%",
+        start: "10%",
+        end: "20%",
         toggleActions: "play none reverse none",
         scrub: 2
     }
@@ -247,8 +247,47 @@ gsap.from(".contact-title",
     }
 )
 
+/* ROPE */
 
 const path = document.querySelector(".rope path");
+const sonido = new Audio("../audio/efecto.wav");
+
+let puedeSonar = true;
+
+document.querySelector(".rope").addEventListener("mousemove", (e) => {
+    const y = e.offsetY;
+
+    const isUp = y < 20;
+    const controlY = isUp ? 5 : 35;
+
+    const d = `M0,20 Q500,${controlY} 1000,20`;
+
+    gsap.to(path, {
+        attr: { d },
+        duration: 0.3,
+        ease: "power2.out"
+    });
+
+    if (puedeSonar) {
+        sonido.currentTime = 0;
+        sonido.play();
+        puedeSonar = false;
+        setTimeout(() => {
+            puedeSonar = true;
+        }, 300); 
+    }
+});
+
+document.querySelector(".rope").addEventListener("mouseleave", () => {
+    gsap.to(path, {
+        attr: { d: "M0,20 Q500,20 1000,20" },
+        duration: 0.5,
+        ease: "elastic.out(1, 0.3)"
+    });
+}); 
+
+
+/* const path = document.querySelector(".rope path");
 
 document.querySelector(".rope").addEventListener("mousemove", (e) => {
     const y = e.offsetY;
@@ -271,7 +310,7 @@ document.querySelector(".rope").addEventListener("mouseleave", () => {
         duration: 0.5,
         ease: "elastic.out(1, 0.3)"
     });
-});
+}); */
 
 /* Cursor */
 const cursor = document.querySelector(".custom-cursor");
@@ -288,8 +327,7 @@ if (window.innerWidth >= 768) {
     });
 
 
-    const links = document.querySelectorAll(".footer-list li a i,#arriba, .copi, p, h1,.hello,.btn-eng, #abrir,.cerrar-menu,.subtitle-hero, .title-portfolio, .about-me-title, .contact-title, .web h4, .web button, .web p, .web a, .web i, .hello h3, .resaltado, .email a");
-
+    const links = document.querySelectorAll(".footer-list li a i,#arriba, .copi p, p, h1,.btn-eng, #abrir,.cerrar-menu,.subtitle-hero, .title-portfolio, .about-me-title, .contact-title, .web h4, .web button, .web p, .web a, .web i, .resaltado, .email a");
     links.forEach(link => {
         link.addEventListener("mouseenter", () => {
             cursor.classList.add("hovering-link");

@@ -22,13 +22,23 @@
         <nav class="nav" id="nav">
             <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
             <ul class="nav-list">
-                <li><a href="#portfolio"><span>Portfolio</span><span>Portfolio</span></a></li>
-                <li><a href="#about-me"><span>Sobre mí</span><span>Sobre mí</span></a></li>
-                <li><a href="#contact"><span>Contacto</span><span>Contacto</span></a></li>
+                <li><a href="#portfolio">
+                        <span data-section="nav" data-value="portfolio">Portfolio</span>
+                        <span data-section="nav" data-value="portfolio">Portfolio</span>
+                    </a></li>
+                <li><a href="#about-me">
+                        <span data-section="nav" data-value="aboutMe">Sobre mí</span>
+                        <span data-section="nav" data-value="aboutMe">Sobre mí</span>
+                    </a></li>
+                <li><a href="#contact">
+                        <span data-section="nav" data-value="contact">Contacto</span>
+                        <span data-section="nav" data-value="contact">Contacto</span>
+                    </a></li>
             </ul>
+
         </nav>
         <div class="btn-eng" id="language-buttons">
-            <a href="" class="nav-link"> <i class="bi bi-translate"></i></a>
+            <button class="nav-link" id="btn-translate"><i class="bi bi-translate"></i></button>
             <a class="nav-link" href="#">
                 <i id="color-mode" class="bi bi-moon-stars-fill"></i>
             </a>
@@ -41,10 +51,11 @@
 
                 <h1 class="title-hero">MERCEDES GUZZO</h1>
                 <div>
-                    <h2 class="subtitle-hero">Desarrolladora Front-End</h2>
+                    <h2 class="subtitle-hero" data-section="hero" data-value="subtitle">Desarrolladora Front-End</h2>
                 </div>
 
-                <p class="hero-p">Desde Buenos Aires, Argentina, me dedico a diseñar y desarrollar sitios web
+                <p class="hero-p" data-section="hero" data-value="paragraph">Desde Buenos Aires, Argentina, me dedico a
+                    diseñar y desarrollar sitios web
                     interactivos y funcionales que se adaptan a las necesidades de cada proyecto. Mi enfoque está en
                     la
                     simplicidad, la usabilidad y el diseño intuitivo, con un compromiso constante por aprender
@@ -52,17 +63,19 @@
                     tecnologías y mejorar mis habilidades.</p>
             </div>
             <div class="portada">
-                <img src="./img/avatar4jpg.png"alt="portada">      
+                <img src="./img/avatar4jpg.png" alt="portada">
             </div>
             <div class="hello">
                 <h3>Hola | Olá | Hello | Bonjour</h3>
             </div>
         </section>
-   
+
         <section class="portfolio container" id="portfolio">
             <div>
-                <h2 class="title-portfolio anim-title"><span>Portfolio</span></h2>
-                <p class="portfolio-p container">En esta sección, te invito a explorar una selección de proyectos web
+                <h2 class="title-portfolio anim-title"> <span data-section="portfolio"
+                        data-value="title">Portfolio</span></h2>
+                <p class="portfolio-p container" data-section="portfolio" data-value="intro">En esta sección, te invito
+                    a explorar una selección de proyectos web
                     que he creado, diseñados para ofrecer una experiencia intuitiva y visualmente atractiva. Cada uno de
                     estos trabajos refleja mi pasión por el desarrollo web y mi enfoque en crear soluciones funcionales
                     y personalizadas para cada cliente. </p>
@@ -71,33 +84,49 @@
             <div class="web-wrap container">
                 <div class="web card1">
                     <div>
-                        <h3 class="web-title">Cristian Basto</h3>
-                        <p class="web-p">Desarrollé el sitio web oficial del contrabajista, arreglador y
+                        <h3 class="web-title" data-section="portfolio" data-value="project1_title">Cristian Basto</h3>
+                        <p class="web-p" data-section="portfolio" data-value="project1_desc">Desarrollé el sitio web
+                            oficial del contrabajista, arreglador y
                             compositor
                             argentino Cristian Basto, especializado en tango y música argentina.
                         </p>
                         <div>
-                            <h5 class="title-icon"> <span class="toggleBtn"><i class="bi bi-arrow-down"></i>Ver
-                                    más</span></h5>
-                            <h5 class="featureTitle hidden">Características principales </h5>
-                            <ul class="featureList hidden">
-                                <li>* Diseño responsivo que se adapta a distintos dispositivos.</li>
-                                <li>* Modo oscuro (Dark Mode) para una mejor experiencia visual en diferentes
-                                    entornos.
-                                </li>
-                                <li>* Multilenguaje (Español/Inglés) con detección y cambio dinámico de idioma.
-                                </li>
-                                <li>* Secciones organizadas para biografía, música, partituras, discografía y
-                                    videos.
-                                </li>
-                                <li>* Interactividad con efectos visuales sutiles que mejoran la experiencia del
-                                    usuario.
-                                </li>
-                                <li>* Optimización de carga para un rendimiento fluido.</li>
-                            </ul>
+                            <h5 class="title-icon"><span class="toggleBtn" data-section="portfolio"
+                                    data-value="see_more">
+                                    <i class="bi bi-arrow-down"></i><span class="see-more-text">Ver más</span>
+                                </span>
+
+                                <h5 class="featureTitle hidden" data-section="portfolio" data-value="features_title">
+                                    Características principales </h5>
+                                <ul class="featureList hidden">
+                                    <li data-section="portfolio" data-value="feature1">* Diseño responsivo que se adapta
+                                        a
+                                        distintos dispositivos.</li>
+                                    <li data-section="portfolio" data-value="feature2">* Modo oscuro (Dark Mode) para
+                                        una
+                                        mejor experiencia visual en diferentes
+                                        entornos.
+                                    </li>
+                                    <li data-section="portfolio" data-value="feature3">* Multilenguaje (Español/Inglés)
+                                        con
+                                        detección y cambio dinámico de idioma.
+                                    </li>
+                                    <li data-section="portfolio" data-value="feature4">* Secciones organizadas para
+                                        biografía, música, partituras, discografía y
+                                        videos.
+                                    </li>
+                                    <li data-section="portfolio" data-value="feature5">* Interactividad con efectos
+                                        visuales
+                                        sutiles que mejoran la experiencia del
+                                        usuario.
+                                    </li>
+                                    <li data-section="portfolio" data-value="feature6">* Optimización de carga para un
+                                        rendimiento fluido.</li>
+                                </ul>
                         </div>
                         <div>
-                            <h4 class="skills-title">Técnicas utilizadas</h4>
+                            <h4 class="skills-title" data-section="portfolio" data-value="tech_title">Técnicas
+                                utilizadas</h4>
                             <ul class="skills">
                                 <li class="skills-icon"><img src="./img/logo-javascript.png" alt=""></li>
                                 <li class="skills-icon"><img src="./img/logo-html.png" alt=""></li>
@@ -124,26 +153,38 @@
 
                 <div class="web card2">
                     <div>
-                        <h3 class="web-title">Natalia Bril</h3>
-                        <p class="web-p">Desarrollé el sitio web oficial de la cantante y docente Natalia Bril,
+                        <h3 class="web-title" data-section="portfolio" data-value="project2_title">Natalia Bril</h3>
+                        <p class="web-p" data-section="portfolio" data-value="project2_desc">Desarrollé el sitio web
+                            oficial de la cantante y docente Natalia Bril,
                             donde
                             presenta su música, biografía, proyectos, clases y cursos.
                         </p>
                         <div>
-                            <h5 class="title-icon"> <span class="toggleBtn"><i class="bi bi-arrow-down"></i>Ver
-                                    más</span></h5>
-                            <h5 class="featureTitle hidden">Características principales </h5>
-                            <ul class="featureList hidden">
-                                <li>* Diseño responsivo, adaptado a distintos dispositivos.</li>
-                                <li>* Multilenguaje (Español/Inglés) con detección automática y cambio manual de
-                                    idioma</li>
-                                <li>* Secciones organizadas para biografía, música, discografía, clases, cursos
-                                    y contacto.
-                                </li>
-                                <li>Interactividad con efectos visuales sutiles que enriquecen la navegación.
-                                </li>
-                                <li>* Optimización de carga para un rendimiento fluido y accesible.</li>
-                            </ul>
+                            <h5 class="title-icon"><span class="toggleBtn" data-section="portfolio"
+                                    data-value="see_more">
+                                    <i class="bi bi-arrow-down"></i><span class="see-more-text">Ver más</span>
+                                </span>
+                                <h5 class="featureTitle hidden" data-section="portfolio" data-value="features_title">
+                                    Características principales</h5>
+                                <ul class="featureList hidden">
+                                    <li data-section="portfolio" data-value="project2_feature1">* Diseño responsivo,
+                                        adaptado a distintos dispositivos.</li>
+                                    <li data-section="portfolio" data-value="project2_feature2">* Multilenguaje
+                                        (Español/Inglés) con detección automática y cambio manual de
+                                        idioma</li>
+                                    <li data-section="portfolio" data-value="project2_feature3">* Secciones organizadas
+                                        para
+                                        biografía, música, discografía, clases, cursos
+                                        y contacto.
+                                    </li>
+                                    <li data-section="portfolio" data-value="project2_feature4">*Interactividad con
+                                        efectos
+                                        visuales sutiles que enriquecen la navegación.
+                                    </li>
+                                    <li data-section="portfolio" data-value="project2_feature5">* Optimización de carga
+                                        para
+                                        un rendimiento fluido y accesible.</li>
+                                </ul>
                         </div>
                         <div>
                             <h4 class="skills-title">Técnicas utilizadas</h4>
@@ -174,28 +215,36 @@
 
                 <div class="web card3">
                     <div>
-                        <h3 class="web-title francini">La Tienda de Francini</h3>
-                        <p class="web-p">Desarrollé el sitio web e-commerce fake de La Tienda de Francini, una
-                            tienda
-                            online donde los usuarios pueden explorar y comprar productos de forma intuitiva y
-                            segura.
+                        <h3 class="web-title francini" data-section="portfolio" data-value="project3_title">La Tienda de
+                            Francini</h3>
+                        <p class="web-p" data-section="portfolio" data-value="project3_desc">
+                            Desarrollé el sitio web e-commerce fake de La Tienda de Francini, una tienda online donde
+                            los usuarios pueden explorar y comprar productos de forma intuitiva y segura.
                         </p>
                         <div>
-                            <h5 class="title-icon"> <span class="toggleBtn"><i class="bi bi-arrow-down"></i>Ver
-                                    más</span></h5>
-                            <h5 class="featureTitle hidden">Características principales </h5>
-                            <ul class="featureList hidden">
-                                <li>* Diseño responsivo que se adapta a distintos dispositivos.</li>
-                                <li>* Multilenguaje (Español/Inglés) con detección y cambio dinámico de idioma.
-                                </li>
-                                <li>* Secciones organizadas para biografía, música, partituras, discografía y
-                                    videos.
-                                </li>
-                                <li>* Interactividad con efectos visuales sutiles que mejoran la experiencia del
-                                    usuario.
-                                </li>
-                                <li>* Optimización de carga para un rendimiento fluido.</li>
-                            </ul>
+                            <h5 class="title-icon"><span class="toggleBtn" data-section="portfolio"
+                                    data-value="see_more">
+                                    <i class="bi bi-arrow-down"></i><span class="see-more-text">Ver más</span>
+                                </span>
+
+                                <h5 class="featureTitle hidden" data-section="portfolio" data-value="features_title">
+                                    Características principales</h5>
+                                <ul class="featureList hidden">
+                                    <li data-section="portfolio" data-value="project3_feature1">* Diseño responsivo que
+                                        se
+                                        adapta a distintos dispositivos.</li>
+                                    <li data-section="portfolio" data-value="project3_feature2">* Multilenguaje
+                                        (Español/Inglés) con detección y cambio dinámico de idioma.</li>
+                                    <li data-section="portfolio" data-value="project3_feature3">* Secciones organizadas
+                                        para
+                                        biografía, música, partituras, discografía y videos.</li>
+                                    <li data-section="portfolio" data-value="project3_feature4">* Interactividad con
+                                        efectos
+                                        visuales sutiles que mejoran la experiencia del usuario.</li>
+                                    <li data-section="portfolio" data-value="project3_feature5">* Optimización de carga
+                                        para
+                                        un rendimiento fluido.</li>
+                                </ul>
                         </div>
                         <div>
                             <h4 class="skills-title">Técnicas utilizadas</h4>
@@ -222,30 +271,40 @@
         </section>
         <section class="about-me container" id="about-me">
             <div>
-                <h2 class="about-me-title anim-title">Sobre Mi</h2>
+                <h2 class="about-me-title anim-title" data-section="about" data-value="title">Sobre mí</h2>
                 <div>
                     <p class="about-me-p">
-                        Soy Mercedes Martinez Guzzo, música profesional y desarrolladora Frontend. Descubrí en el
-                        desarrollo
-                        web una nueva pasión que combina creatividad y tecnología. Me formé en Coderhouse, donde obtuve
-                        el
-                        certificado de <span class="resaltado">Desarrolladora Frontend</span>, completando los cursos de
-                        <span class="resaltado">Desarrollo Web</span>, <span class="resaltado">JavaScript</span> y <span
-                            class="resaltado">React.js</span>, además de un curso de <span
-                            class="resaltado">WordPress</span>.
+                        <span data-section="about" data-value="desc_1">
+                            Soy Mercedes Martinez Guzzo, música profesional y desarrolladora Frontend. Descubrí en el
+                            desarrollo web una nueva pasión que combina creatividad y tecnología. Me formé en
+                            Coderhouse, donde obtuve el certificado de
+                        </span>
+                        <span class="resaltado" data-section="about" data-value="highlight_frontend">Desarrolladora
+                            Frontend</span>,
+                        <span data-section="about" data-value="desc_2">
+                            completando los cursos de
+                        </span>
+                        <span class="resaltado" data-section="about" data-value="highlight_web">Desarrollo Web</span>,
+                        <span class="resaltado" data-section="about" data-value="highlight_js">JavaScript</span>
+                        <span data-section="about" data-value="desc_3">y</span>
+                        <span class="resaltado" data-section="about" data-value="highlight_react">React.js</span>,
+                        <span data-section="about" data-value="desc_4">además de un curso de</span>
+                        <span class="resaltado" data-section="about" data-value="highlight_wp">WordPress</span>.
                         <br>
-                        Estoy comenzando en el mundo del desarrollo y tengo muchas ganas de seguir creciendo,
-                        aprendiendo y
-                        aportando en proyectos desafiantes. Me entusiasma la idea de trabajar en equipo, compartir
-                        conocimientos y continuar desarrollándome profesionalmente.
+                        <span data-section="about" data-value="desc_5">
+                            Estoy comenzando en el mundo del desarrollo y tengo muchas ganas de seguir creciendo,
+                            aprendiendo y aportando en proyectos desafiantes. Me entusiasma la idea de trabajar en
+                            equipo, compartir conocimientos y continuar desarrollándome profesionalmente.
+                        </span>
                     </p>
-                </div>
-                <div>
+
                 </div>
             </div>
+
             <div>
-                <h3 class="title-certif">Certificaciones</h3>
+                <h3 class="title-certif" data-section="about" data-value="certifications">Certificaciones</h3>
             </div>
+
             <div class="wrapp-certificados fade-in">
                 <div class="certificado fe"><img src="./img/fe.png" alt=""></div>
                 <div class="certificado ds"><img src="./img/ds.png" alt=""></div>
@@ -253,14 +312,19 @@
                 <div class="certificado react"><img src="./img/reactjs.png" alt=""></div>
                 <div class="certificado wp"><img src="./img/wp.png" alt=""></div>
             </div>
+
             <button id="arriba"><i class="bi bi-rocket"></i></button>
         </section>
+
         <section class="contact container" id="contact">
-            <h2 class="contact-title anim-title">Contacto</h2>
+            <h2 class="contact-title anim-title" data-section="contact" data-value="title">Contacto</h2>
             <div class="email">
-                <p>Para contactarme escribíme a mi correo :
-                    <a href="mailto:mamercedesguzzo@gmail.com">
-                        mamercedesguzzo@gmail.com</a>
+                <p>
+                <p>
+                    <span data-section="contact" data-value="text"> 
+                        Para contactarme escribíme a mi correo:
+                    </span>
+                    <a href="mailto:mamercedesguzzo@gmail.com">mamercedesguzzo@gmail.com</a>
                 </p>
             </div>
 
@@ -304,6 +368,8 @@
 
 <script src="js/dark-mode.js"></script>
 <script src="js/gsap.js"></script>
+
+<script src="js/language.js"></script>
 <script src="js/index.js"></script>
 
 </html>
