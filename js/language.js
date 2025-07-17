@@ -1,6 +1,6 @@
 let currentLang = localStorage.getItem('idioma') || 'es';
 
-function cambiarIdioma(idioma) {
+function cambiarIdioma(idioma, callback) {
     fetch(`lang/${idioma}.json`)
         .then(res => res.json())
         .then(data => {
@@ -15,6 +15,9 @@ function cambiarIdioma(idioma) {
                 }
             });
 
-            localStorage.setItem('idioma', idioma); 
+            localStorage.setItem('idioma', idioma);
+
+
+            if (callback) callback();
         });
 }

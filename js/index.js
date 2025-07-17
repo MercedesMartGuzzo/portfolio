@@ -196,14 +196,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* CAMBIAR IDIOMA */
 
-
-document.addEventListener('DOMContentLoaded', () => {
-    cambiarIdioma(currentLang);
+document.addEventListener("DOMContentLoaded", () => {
+    cambiarIdioma(currentLang, () => {
+        animarPortfolio(); 
+    });
 });
 
 document.getElementById("btn-translate").addEventListener("click", () => {
     currentLang = currentLang === "es" ? "en" : "es";
-    cambiarIdioma(currentLang);
+    cambiarIdioma(currentLang, () => {
+        animarPortfolio();
+    });
 });
+
 
 

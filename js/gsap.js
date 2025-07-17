@@ -49,7 +49,6 @@ gsap.from(".hero-p", {
 gsap.registerPlugin(ScrollTrigger);
 gsap.from(".portada", {
     y: 5,
-    /* opacity: 0,  */
     duration: 1.5,
     ease: "power2.out",
     delay: 0.5,
@@ -65,8 +64,8 @@ gsap.from(".portada", {
 /* PORTADA-IMG */
 gsap.from(".portada img",
     {
-        y: 10,
-        duration: 2,
+        y: 20,
+        duration: 1.7,
         ease: "power2.out",
         opacity: 0,
         delay: .3
@@ -133,13 +132,12 @@ gsap.fromTo(".title-portfolio",
 
 /* PORTFOLIO-P */
 
-const splitText = new SplitType(".portfolio-p", { types: "lines" });
+/* const splitText = new SplitType(".portfolio-p", { types: "lines" });
 
 gsap.from(splitText.lines, {
     opacity: 0,
     y: 20,
     duration: 1,
-    /*  delay:1, */
     ease: "power3.out",
     stagger: 0.2,
     scrollTrigger: {
@@ -148,7 +146,27 @@ gsap.from(splitText.lines, {
         end: "top 30%",
         toggleActions: "play none none none",
     }
-});
+}); */
+function animarPortfolio() {
+    if (window.splitText) window.splitText.revert();
+
+    window.splitText = new SplitType(".portfolio-p", { types: "lines" });
+
+    gsap.from(window.splitText.lines, {
+        opacity: 0,
+        y: 20,
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: ".portfolio-p",
+            start: "top 80%",
+            end: "top 30%",
+            toggleActions: "play none none none",
+        },
+    });
+}
+
 
 //CARD-PORTFOLIO//
 
@@ -274,7 +292,7 @@ document.querySelector(".rope").addEventListener("mousemove", (e) => {
         puedeSonar = false;
         setTimeout(() => {
             puedeSonar = true;
-        }, 300); 
+        }, 300);
     }
 });
 
@@ -284,7 +302,7 @@ document.querySelector(".rope").addEventListener("mouseleave", () => {
         duration: 0.5,
         ease: "elastic.out(1, 0.3)"
     });
-}); 
+});
 
 
 /* const path = document.querySelector(".rope path");
@@ -327,7 +345,7 @@ if (window.innerWidth >= 768) {
     });
 
 
-    const links = document.querySelectorAll(".footer-list li a i,#arriba, .copi p, p, h1,.btn-eng, #abrir,.cerrar-menu,.subtitle-hero, .title-portfolio, .about-me-title, .contact-title, .web h4, .web button, .web p, .web a, .web i, .resaltado, .email a");
+    const links = document.querySelectorAll(".footer-list li a i,#arriba,.copi p,h1,.btn-eng,#abrir,.cerrar-menu,.subtitle-hero,.title-portfolio,.about-me-title,.contact-title,.web h4,.web h3,.web i,.resaltado,.email a");
     links.forEach(link => {
         link.addEventListener("mouseenter", () => {
             cursor.classList.add("hovering-link");
