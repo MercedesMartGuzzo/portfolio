@@ -132,21 +132,7 @@ gsap.fromTo(".title-portfolio",
 
 /* PORTFOLIO-P */
 
-/* const splitText = new SplitType(".portfolio-p", { types: "lines" });
 
-gsap.from(splitText.lines, {
-    opacity: 0,
-    y: 20,
-    duration: 1,
-    ease: "power3.out",
-    stagger: 0.2,
-    scrollTrigger: {
-        trigger: ".portfolio-p",
-        start: "top 80%",
-        end: "top 30%",
-        toggleActions: "play none none none",
-    }
-}); */
 function animarPortfolio() {
     if (window.splitText) window.splitText.revert();
 
@@ -187,7 +173,6 @@ gsap.utils.toArray(".web").forEach((element) => {
         }
     });
 });
-
 
 
 //CARD-PORTFOLIO-DESKTOP
@@ -232,8 +217,6 @@ document.querySelectorAll('.img-wrapper video').forEach(video => {
         }
     });
 });
-
-
 
 //ABOUT ME//
 
@@ -304,31 +287,6 @@ document.querySelector(".rope").addEventListener("mouseleave", () => {
     });
 });
 
-
-/* const path = document.querySelector(".rope path");
-
-document.querySelector(".rope").addEventListener("mousemove", (e) => {
-    const y = e.offsetY;
-
-
-    const isUp = y < 20;
-    const controlY = isUp ? 5 : 35;
-
-    const d = `M0,20 Q500,${controlY} 1000,20`;
-    gsap.to(path, {
-        attr: { d },
-        duration: 0.3,
-        ease: "power2.out"
-    });
-});
-
-document.querySelector(".rope").addEventListener("mouseleave", () => {
-    gsap.to(path, {
-        attr: { d: "M0,20 Q500,20 1000,20" },
-        duration: 0.5,
-        ease: "elastic.out(1, 0.3)"
-    });
-}); */
 
 /* Cursor */
 const cursor = document.querySelector(".custom-cursor");

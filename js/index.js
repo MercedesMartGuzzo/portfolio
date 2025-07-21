@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     cambiarIdioma(currentLang, () => {
-        animarPortfolio(); 
+        animarPortfolio();
     });
 });
 

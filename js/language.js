@@ -4,6 +4,10 @@ function cambiarIdioma(idioma, callback) {
     fetch(`lang/${idioma}.json`)
         .then(res => res.json())
         .then(data => {
+            const portfolioElem = document.querySelector('[data-section="portfolio"][data-value="intro"]');
+            if (window.splitText && portfolioElem) {
+                window.splitText.revert();
+            }
             document.querySelectorAll('[data-section][data-value]').forEach(elem => {
                 const section = elem.getAttribute('data-section');
                 const key = elem.getAttribute('data-value');
@@ -16,8 +20,8 @@ function cambiarIdioma(idioma, callback) {
             });
 
             localStorage.setItem('idioma', idioma);
-
-
-            if (callback) callback();
+            if (typeof callback === 'function') {
+                callback();
+            }
         });
 }
