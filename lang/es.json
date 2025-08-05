@@ -48,6 +48,7 @@
         "project4_feature3": "* Navegación por categorías y detalle de producto con React Router.",
         "project4_feature4": "* Interfaz desarrollada con Material UI (MUI) y diseño responsive.",
         "project4_feature5": "* Lógica implementada con Hooks y Context API para gestión de estado.",
+        "project4_feature6": "* Almacenamiento de datos en Firebase.",
         "tech_title3": "Técnicas utilizadas"
     },
     "about": {
