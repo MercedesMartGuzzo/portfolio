@@ -635,7 +635,8 @@ body.dark-mode .abrir-menu:hover {
 
 .card1 h4,
 .card2 h4,
-.card3 h4 {
+.card3 h4,
+.card4 h4 {
     font-size: 1.3rem;
 }
 
@@ -649,8 +650,10 @@ body.dark-mode .abrir-menu:hover {
 .card2 p,
 .card2 .featureList,
 .card3 p,
-.card3 .featureList {
-    color: var(--clr-details)
+.card3 .featureList,
+.card4 p,
+.card4 .featureList {
+    color: var(--clr-details);
 }
 
 .card1 h3,
@@ -715,6 +718,20 @@ body.dark-mode .abrir-menu:hover {
 }
 
 
+.card4,.card4 button {
+    border: 1px solid #7e3333;
+}
+.card4 button:hover {
+    background-color: #7e3333;
+    color: var(--clr-text2);
+}
+
+.card4 h3,
+.card4 button,
+.card4 h4,
+.card4 h5 {
+    color: #7e3333;
+}
 
 .skills {
     display: flex;
@@ -1330,4 +1347,3 @@ ul.featureList li {
 
     }
 }
-

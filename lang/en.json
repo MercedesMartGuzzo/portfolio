@@ -24,18 +24,31 @@
         "tech_title": "Technologies used",
         "project2_title": "Natalia Bril",
         "project2_desc": "I developed the official website for singer and teacher Natalia Bril, where she presents her music, biography, projects, classes, and courses.",
+        "features_title1": "Main features",
         "project2_feature1": "* Responsive design adapted to various devices.",
         "project2_feature2": "* Multilingual (Spanish/English) with automatic detection and manual switching.",
         "project2_feature3": "* Organized sections for biography, music, discography, classes, courses, and contact.",
         "project2_feature4": "* Subtle visual effects that enhance navigation.",
         "project2_feature5": "* Load optimization for smooth and accessible performance.",
+        "tech_title1": "Technologies used",
         "project3_title": "La Tienda de Francini",
         "project3_desc": "I developed the fake e-commerce website for La Tienda de Francini, an online store where users can explore and purchase products in an intuitive and secure way.",
+        "features_title2": "Main features",
         "project3_feature1": "* Responsive design that adapts to various devices.",
         "project3_feature2": "* Multilingual (Spanish/English) with dynamic language detection and switching.",
         "project3_feature3": "* Organized sections for biography, music, sheet music, discography, and videos.",
         "project3_feature4": "* Subtle visual effects that improve user experience.",
-        "project3_feature5": "* Load optimization for smooth performance."
+        "project3_feature5": "* Load optimization for smooth performance.",
+        "tech_title2": "Technologies used",
+        "project4_title": "Tienda Shop",
+        "project4_desc": "I developed a web application for renting hobby and leisure equipment, designed to connect users who want to share or access tools and materials for their personal projects.",
+        "features_title3": "Main features",
+        "project4_feature1": "* Responsive design for various devices.",
+        "project4_feature2": "* User-friendly interface for browsing and managing equipment listings.",
+        "project4_feature3": "* Categorization of items to enhance discoverability.",
+        "project4_feature4": "* Simple reservation and contact process between users.",
+        "project4_feature5": "* Multilingual support and lightweight performance.",
+        "tech_title3": "Technologies used"
     },
     "about": {
         "title": "About Me",
@@ -54,5 +67,4 @@
         "title": "Contact",
         "text": "To contact me, write to my email:"
     }
-
 }
