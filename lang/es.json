@@ -41,14 +41,14 @@
         "tech_title2": "Tecnologías utilizadas",
         "project3_feature5": "* Optimización de carga para un rendimiento fluido.",
         "project4_title": "Tienda Shop",
-        "project4_desc": "Desarrollé una aplicación web para el alquiler de equipos de ocio y pasatiempos, diseñada para conectar personas que quieran compartir o acceder a herramientas y materiales para sus proyectos personales.",
-        "features_title3": "Principales funcionalidades",
-        "project4_feature1": "* Diseño responsive para distintos dispositivos.",
-        "project4_feature2": "* Interfaz amigable para explorar y gestionar los productos.",
-        "project4_feature3": "* Categorización de los artículos para facilitar la búsqueda.",
-        "project4_feature4": "* Proceso simple de reserva y contacto entre usuarios.",
-        "project4_feature5": "* Soporte multilenguaje y rendimiento optimizado.",
-        "tech_title3": "Tecnologías utilizadas"
+        "project4_desc": "Desarrollé esta tienda online ficticia como parte de un proyecto React JS, simulando un e-commerce completo. La aplicación permite explorar productos, ver detalles, agregar al carrito y simular una compra, todo con una interfaz clara y moderna.",
+        "features_title3": "Características principales",
+        "project4_feature1": "* Catálogo dinámico con productos obtenidos desde FakeStoreAPI.",
+        "project4_feature2": "* Funcionalidad completa de carrito de compras y simulación de orden.",
+        "project4_feature3": "* Navegación por categorías y detalle de producto con React Router.",
+        "project4_feature4": "* Interfaz desarrollada con Material UI (MUI) y diseño responsive.",
+        "project4_feature5": "* Lógica implementada con Hooks y Context API para gestión de estado.",
+        "tech_title3": "Técnicas utilizadas"
     },
     "about": {
         "title": "Sobre mí",
