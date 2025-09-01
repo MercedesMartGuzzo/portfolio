@@ -4,14 +4,10 @@ function cambiarIdioma(idioma, callback) {
     fetch(`lang/${idioma}.json`)
         .then(res => res.json())
         .then(data => {
-            const portfolioElem = document.querySelector('[data-section="portfolio"][data-value="intro"]');
-            if (window.splitText && portfolioElem) {
-                window.splitText.revert();
-            }
+            // Actualizar textos
             document.querySelectorAll('[data-section][data-value]').forEach(elem => {
                 const section = elem.getAttribute('data-section');
                 const key = elem.getAttribute('data-value');
-
                 if (key === 'see_more' && elem.querySelector('.see-more-text')) {
                     elem.querySelector('.see-more-text').textContent = data[section][key];
                 } else {
@@ -19,9 +15,23 @@ function cambiarIdioma(idioma, callback) {
                 }
             });
 
-            localStorage.setItem('idioma', idioma);
-            if (typeof callback === 'function') {
-                callback();
+            // 🔹 Cambiar CV según idioma
+            const cvLink = document.getElementById("cv-link");
+            if (cvLink) {
+                if (idioma === "es") {
+                    cvLink.href = "img/resume-es.pdf";
+                } else if (idioma === "en") {
+                    cvLink.href = "img/resume-eng.pdf";
+                }
             }
-        });
+
+            localStorage.setItem('idioma', idioma);
+            if (typeof callback === 'function') callback();
+        })
+        .catch(err => console.error(err));
 }
+
+// Aplicar idioma al cargar la página
+document.addEventListener("DOMContentLoaded", () => {
+    cambiarIdioma(currentLang);
+});
