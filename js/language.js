@@ -15,7 +15,7 @@ function cambiarIdioma(idioma, callback) {
                 }
             });
 
-            // 🔹 Cambiar CV según idioma
+            //  Cambiar CV según idioma
             const cvLink = document.getElementById("cv-link");
             if (cvLink) {
                 if (idioma === "es") {

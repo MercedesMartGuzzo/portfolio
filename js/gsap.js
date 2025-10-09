@@ -111,18 +111,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo(".title-portfolio",
     {
-        y: 40,
-        opacity: 0
+        y: 90,
+   /*    opacity: 0  */
     },
     {
-        y: 0,
-        /*   stagger: 0.5, */
-        opacity: 2,
+        y:0,
+           stagger: 0.5, 
+        opacity: 1,
         duration: 2,
-        delay: .5,
+        delay: 2,
         scrollTrigger: {
             trigger: ".portfolio",
-            start: "top 80%",
+            start: "top 60%",
             end: "top 50%",
             scrub: 2,
         }
@@ -141,7 +141,7 @@ function animarPortfolio() {
     gsap.from(window.splitText.lines, {
         opacity: 0,
         y: 20,
-        duration: 1,
+        duration: 3,
         ease: "power3.out",
         stagger: 0.2,
         scrollTrigger: {
@@ -192,7 +192,8 @@ mm.add("(min-width: 768px)", () => {
                 start: "top 80%",
                 end: "top 30%",
                 scrub: 2,
-                toggleActions: "play none none reverse"
+                toggleActions: "play none none reverse",
+         
             }
         });
     });
@@ -222,9 +223,9 @@ document.querySelectorAll('.img-wrapper video').forEach(video => {
 
 gsap.from(".about-me-title",
     {
-        y: 40,
+        y: 90,
         opacity: 0,
-        duration: 2,
+        duration: 2,  
         scrollTrigger: {
             trigger: ".about-me-title",
             start: "top 80%",
@@ -236,7 +237,7 @@ gsap.from(".about-me-title",
 
 gsap.from(".contact-title",
     {
-        y: 40,
+        y: 90,
         opacity: 0,
         duration: 2,
         scrollTrigger: {

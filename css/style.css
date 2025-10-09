@@ -403,7 +403,9 @@ body.dark-mode .btn-eng>a:hover,
 body.dark-mode .abrir-menu:hover {
     color: var(--clr-title);
 }
-
+body.dark-mode .span-title {
+    background-color: var(--clr-details);
+}
 
 .custom-cursor {
     position: fixed;
@@ -529,7 +531,11 @@ body.dark-mode .abrir-menu:hover {
     scroll-margin-top: .5rem;
 }
 
-
+.span-title {
+   display: inline-block;
+   overflow: hidden;
+   background-color: white;
+}
 .title-portfolio,
 .about-me-title,
 .contact-title {
