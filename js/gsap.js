@@ -112,11 +112,12 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.fromTo(".title-portfolio",
     {
         y: 90,
-   /*    opacity: 0  */
+        /*    opacity: 0  */
+
     },
     {
-        y:0,
-           stagger: 0.5, 
+        y: 0,
+        stagger: 0.5,
         opacity: 1,
         duration: 2,
         delay: 2,
@@ -193,7 +194,7 @@ mm.add("(min-width: 768px)", () => {
                 end: "top 30%",
                 scrub: 2,
                 toggleActions: "play none none reverse",
-         
+
             }
         });
     });
@@ -225,7 +226,7 @@ gsap.from(".about-me-title",
     {
         y: 90,
         opacity: 0,
-        duration: 2,  
+        duration: 2,
         scrollTrigger: {
             trigger: ".about-me-title",
             start: "top 80%",

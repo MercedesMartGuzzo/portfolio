@@ -62,7 +62,10 @@
         "highlight_react": "React.js",
         "desc_4": "además de un curso de",
         "highlight_wp": "WordPress",
-        "desc_5": "Estoy comenzando en el mundo del desarrollo y tengo muchas ganas de seguir creciendo, aprendiendo y aportando en proyectos desafiantes. Me entusiasma la idea de trabajar en equipo, compartir conocimientos y continuar desarrollándome profesionalmente."
+        "desc_5": "Estoy comenzando en el mundo del desarrollo y tengo muchas ganas de seguir creciendo, aprendiendo y aportando en proyectos desafiantes. Me entusiasma la idea de trabajar en equipo, compartir conocimientos y continuar desarrollándome profesionalmente.",
+         "skills-title1": "Habilidades",
+        "certifications": "Certificados"
+
     },
     "contact": {
         "title": "Contacto",

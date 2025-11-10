@@ -62,7 +62,9 @@
         "highlight_react": "React.js",
         "desc_4": "as well as a course in",
         "highlight_wp": "WordPress",
-        "desc_5": "I'm just starting in the development world and I'm eager to keep growing, learning, and contributing to challenging projects. I'm excited about working in teams, sharing knowledge, and continuing my professional growth."
+        "desc_5": "I'm just starting in the development world and I'm eager to keep growing, learning, and contributing to challenging projects. I'm excited about working in teams, sharing knowledge, and continuing my professional growth.",
+        "skills-title1": "Skills",
+        "certifications": "Certificates"
     },
     "contact": {
         "title": "Contact",
