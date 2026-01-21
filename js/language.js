@@ -19,9 +19,9 @@ function cambiarIdioma(idioma, callback) {
             const cvLink = document.getElementById("cv-link");
             if (cvLink) {
                 if (idioma === "es") {
-                    cvLink.href = "img/resume-es.pdf";
+                    cvLink.href = "img/mercedes-martinez-guzzo-cv.pdf";
                 } else if (idioma === "en") {
-                    cvLink.href = "img/resume-eng.pdf";
+                    cvLink.href = "img/mercedes-martinez-guzzo-en.pdf";
                 }
             }
 
