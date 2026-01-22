@@ -358,7 +358,9 @@ body.dark-mode .web button,
 body.dark-mode .footer-list a i,
 body.dark-mode .hello h3,
 body.dark-mode .resaltado,
-body.dark-mode .email a, body.dark-mode .wordpress-title, body.dark-mode .backend-title {
+body.dark-mode .email a,
+body.dark-mode .wordpress-title,
+body.dark-mode .backend-title {
     color: var(--clr-text2);
 }
 
@@ -403,18 +405,22 @@ body.dark-mode .btn-eng>a:hover,
 body.dark-mode .abrir-menu:hover {
     color: var(--clr-title);
 }
+
 body.dark-mode .span-title {
     background-color: var(--clr-details);
 }
+
 body.dark-mode .skill {
     color: var(--clr-text2);
-    border:1px solid var(--clr-text2) ;
+    border: 1px solid var(--clr-text2);
 }
+
 body.dark-mode .skill:hover {
-  
-      box-shadow: 10px 10px 10px 0 rgba(255, 255, 255, 0.1);
-    transition:  color 0.3s ease-in-out,
+
+    box-shadow: 10px 10px 10px 0 rgba(255, 255, 255, 0.1);
+    transition: color 0.3s ease-in-out,
 }
+
 .custom-cursor {
     position: fixed;
     top: 0;
@@ -540,10 +546,11 @@ body.dark-mode .skill:hover {
 }
 
 .span-title {
-   display: inline-block;
-   overflow: hidden;
-   background-color: white;
+    display: inline-block;
+    overflow: hidden;
+    background-color: white;
 }
+
 .title-portfolio,
 .about-me-title,
 .contact-title {
@@ -732,9 +739,11 @@ body.dark-mode .skill:hover {
 }
 
 
-.card4,.card4 button {
+.card4,
+.card4 button {
     border: 1px solid #7e3333;
 }
+
 .card4 button:hover {
     background-color: #7e3333;
     color: var(--clr-text2);
@@ -806,15 +815,21 @@ ul.featureList li {
     display: inline;
 }
 
-.title-certif,.skills-title1 {
+.title-certif,
+.skills-title1 {
     color: var(--clr-title);
     margin-top: 2rem;
     margin-bottom: .5rem;
 }
-.skills-title1{
+
+.skills-title1 {
     margin-bottom: .5rem;
 }
-.wrapp-skills,.wordpress-pack,.backend-pack {
+
+.wrapp-skills,
+.wordpress-pack,
+.backend-pack,
+.figma-pack {
     display: flex;
     flex-direction: row;
     gap: .5rem;
@@ -823,29 +838,41 @@ ul.featureList li {
     margin-bottom: 1rem;
     flex-wrap: wrap;
 }
-.wordpress-title,.backend-title,.skills-title1 {
+
+.wordpress-title,
+.backend-title,
+.skills-title1,
+.diseno-title,
+.frontend-title {
     margin-top: 1rem;
 }
-.skill{
+
+.skill {
     font-family: var(--ff-text);
     font-weight: 500;
     color: var(--clr-details2);
-    border:1px solid var(--clr-title) ;
+    border: 1px solid var(--clr-title);
     padding: .3rem .6rem;
     border-radius: 5px;
     font-size: .9rem;
 }
+
 .skill:hover {
     border: 1px solid var(--clr-details2);
-    transition:  color 0.3s ease-in-out,
-}   
-.wordpress-title,.backend-title {
+    transition: color 0.3s ease-in-out,
+}
+
+.wordpress-title,
+.backend-title,
+.diseno-title,
+.frontend-title {
     font-family: var(--ff-text);
     font-weight: 600;
     color: var(--clr-title);
     margin-right: .5rem;
     font-size: 1rem;
 }
+
 .wrapp-certificados {
     display: flex;
     flex-direction: column;
