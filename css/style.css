@@ -12,6 +12,7 @@
     --clr-details2: rgb(61, 45, 45);
     --clr-text2: #e0e0e0;
     --clr-details: black;
+     --clr-primary-container: #003C43;
 }
 
 * {
@@ -521,7 +522,13 @@ body.dark-mode .skill:hover {
     border-bottom-right-radius: 122px;
     border-bottom-left-radius: 122px;
 }
-
+.footer-list.up{
+    gap: 1.5rem;
+}
+.footer-list.up a i{
+    font-size: 1.8rem;
+  
+}
 .hello {
     display: flex;
     flex-direction: column;
@@ -653,14 +660,28 @@ body.dark-mode .skill:hover {
 .btn-web:hover {
     width: 180px;
 }
-
+.card0 h4,
 .card1 h4,
 .card2 h4,
 .card3 h4,
 .card4 h4 {
     font-size: 1.3rem;
 }
-
+.card0 {        
+    border: 1px solid var(--clr-primary-container);
+    color: var(--clr-primary-container);
+}
+.card0 h3,
+.card0 button {
+    color: var(--clr-primary-container);
+}
+.card0 button {
+    border: 1px solid var(--clr-primary-container);
+}
+.card0 button:hover {
+    background-color: var(--clr-primary-container);
+    color: var(--clr-text2);
+}
 .card1 {
     border: 1px solid #964b00;
     color: #964b00;
