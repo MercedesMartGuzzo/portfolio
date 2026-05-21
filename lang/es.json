@@ -22,7 +22,7 @@
         "project0_feature6": "* Hero interactivo con animaciones, scroll narrativo y experiencia visual adaptativa desarrollada con Framer Motion y GSAP.",
         "project0_feature7": "* Interfaz moderna y accesible enfocada en transmitir cercanía, claridad y contención visual.",
         "project0_feature8": "* Optimización de imágenes y estructura frontend enfocada en rendimiento y tiempos de carga eficientes.",
-        "tech_title": "Stack",
+      
         "project1_title": "Cristian Basto",
         "project1_desc": "Desarrollé el sitio web oficial del contrabajista, arreglador y compositor argentino Cristian Basto, especializado en tango y música argentina.",
         "see_more": "Ver más",
@@ -33,7 +33,7 @@
         "feature4": "* Secciones organizadas para biografía, música, partituras, discografía y videos.",
         "feature5": "* Interactividad con efectos visuales sutiles que mejoran la experiencia del usuario.",
         "feature6": "* Optimización de carga para un rendimiento fluido.",
-        "tech_title0": "Técnicas utilizadas",
+      
         "project2_title": "Natalia Bril",
         "project2_desc": "Desarrollé el sitio web oficial de la cantante y docente Natalia Bril, donde presenta su música, biografía, proyectos, clases y cursos.",
         "features_title1": "Características principales",
@@ -41,7 +41,7 @@
         "project2_feature2": "* Multilenguaje (Español/Inglés) con detección automática y cambio manual de idioma",
         "project2_feature3": "* Secciones organizadas para biografía, música, discografía, clases, cursos y contacto.",
         "project2_feature4": "* Interactividad con efectos visuales sutiles que enriquecen la navegación.",
-        "tech_title1": "Tecnologías utilizadas",
+     
         "project2_feature5": "* Optimización de carga para un rendimiento fluido y accesible.",
         "project3_title": "La Tienda de Francini",
         "project3_desc": "Desarrollé el sitio web e-commerce fake de La Tienda de Francini, una tienda online donde los usuarios pueden explorar y comprar productos de forma intuitiva y segura.",
@@ -50,7 +50,7 @@
         "project3_feature2": "* Multilenguaje (Español/Inglés) con detección y cambio dinámico de idioma.",
         "project3_feature3": "* Secciones organizadas para biografía, música, partituras, discografía y videos.",
         "project3_feature4": "* Interactividad con efectos visuales sutiles que mejoran la experiencia del usuario.",
-        "tech_title2": "Tecnologías utilizadas",
+        
         "project3_feature5": "* Optimización de carga para un rendimiento fluido.",
         "project4_title": "Tienda Shop",
         "project4_desc": "Desarrollé esta tienda online ficticia como parte de un proyecto React JS, simulando un e-commerce completo. La aplicación permite explorar productos, ver detalles, agregar al carrito y simular una compra, todo con una interfaz clara y moderna.",
@@ -60,8 +60,8 @@
         "project4_feature3": "* Navegación por categorías y detalle de producto con React Router.",
         "project4_feature4": "* Interfaz desarrollada con Material UI (MUI) y diseño responsive.",
         "project4_feature5": "* Lógica implementada con Hooks y Context API para gestión de estado.",
-        "project4_feature6": "* Almacenamiento de datos en Firebase.",
-        "tech_title3": "Técnicas utilizadas"
+        "project4_feature6": "* Almacenamiento de datos en Firebase."
+      
     },
     "about": {
         "title": "Sobre mí",

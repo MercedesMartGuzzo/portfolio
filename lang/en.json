@@ -22,7 +22,7 @@
         "project0_feature6": "Interactive hero with animations, scroll-driven storytelling, and an adaptive visual experience built with Framer Motion and GSAP.",
         "project0_feature7": "Modern and accessible interface focused on conveying empathy, clarity, and visual comfort.",
         "project0_feature8": "Image optimization and frontend architecture focused on high performance and efficient loading times.",
-        "tech_title": "Stack",
+       
         "project1_title": "Cristian Basto",
         "project1_desc": "I developed the official website of Argentine double bassist, arranger, and composer Cristian Basto, specialized in tango and Argentine music.",
         "see_more": "See more",
@@ -41,7 +41,6 @@
         "project2_feature3": "* Organized sections for biography, music, discography, classes, courses, and contact.",
         "project2_feature4": "* Subtle visual effects that enhance navigation.",
         "project2_feature5": "* Load optimization for smooth and accessible performance.",
-        "tech_title1": "Technologies used",
         "project3_title": "La Tienda de Francini",
         "project3_desc": "I developed the fake e-commerce website for La Tienda de Francini, an online store where users can explore and purchase products in an intuitive and secure way.",
         "features_title2": "Main features",
@@ -50,7 +49,7 @@
         "project3_feature3": "* Organized sections for biography, music, sheet music, discography, and videos.",
         "project3_feature4": "* Subtle visual effects that improve user experience.",
         "project3_feature5": "* Load optimization for smooth performance.",
-        "tech_title2": "Technologies used",
+       
         "project4_title": "Tienda Shop",
         "project4_desc": "I developed this fictional online store as part of a React JS project, simulating a complete e-commerce. The application allows users to browse products, view details, add items to the cart, and simulate a purchase — all within a clean and modern interface.",
         "features_title3": "Main features",
@@ -59,8 +58,8 @@
         "project4_feature3": "* Category browsing and product detail view using React Router.",
         "project4_feature4": "* Interface developed with Material UI (MUI) and responsive design.",
         "project4_feature5": "* State management implemented with Hooks and Context API.",
-        "project4_feature6": "* Data storage powered by Firebase.",
-        "tech_title3": "Technologies used"
+        "project4_feature6": "* Data storage powered by Firebase."
+
     },
     "about": {
         "title": "About Me",
